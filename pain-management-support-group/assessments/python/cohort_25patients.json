@@ -1,0 +1,735 @@
+[
+  {
+    "id": 1,
+    "first_name": "Margaret",
+    "last_name": "Smith",
+    "age": 74,
+    "gender": "Female",
+    "primary_condition": "Hip Osteoarthritis",
+    "pain_locations": [
+      "hip_left",
+      "hip_right"
+    ],
+    "baseline_pain": 5,
+    "baseline_sleep": 7,
+    "baseline_fatigue": 5,
+    "baseline_anxiety": 4,
+    "baseline_function": 6,
+    "current_medications": [
+      "Tramadol 50mg"
+    ],
+    "comorbidities": [
+      "Sleep Apnea",
+      "Hypertension",
+      "GERD"
+    ],
+    "employment_status": "Retired",
+    "education_level": "Bachelor's degree",
+    "motivation_level": "low",
+    "adherence_probability": 0.3499999999999999,
+    "improvement_potential": "poor"
+  },
+  {
+    "id": 2,
+    "first_name": "Karen",
+    "last_name": "Rodriguez",
+    "age": 65,
+    "gender": "Female",
+    "primary_condition": "Rheumatoid Arthritis",
+    "pain_locations": [
+      "hand_left",
+      "hand_right",
+      "wrist_left",
+      "wrist_right"
+    ],
+    "baseline_pain": 5,
+    "baseline_sleep": 7,
+    "baseline_fatigue": 5,
+    "baseline_anxiety": 5,
+    "baseline_function": 5,
+    "current_medications": [
+      "Naproxen 500mg",
+      "Duloxetine 60mg"
+    ],
+    "comorbidities": [
+      "Sleep Apnea"
+    ],
+    "employment_status": "Retired",
+    "education_level": "Graduate degree",
+    "motivation_level": "medium",
+    "adherence_probability": 0.6499999999999999,
+    "improvement_potential": "good"
+  },
+  {
+    "id": 3,
+    "first_name": "Daniel",
+    "last_name": "Davis",
+    "age": 69,
+    "gender": "Male",
+    "primary_condition": "Shoulder Rotator Cuff Injury",
+    "pain_locations": [
+      "shoulder_right"
+    ],
+    "baseline_pain": 7,
+    "baseline_sleep": 3,
+    "baseline_fatigue": 5,
+    "baseline_anxiety": 4,
+    "baseline_function": 5,
+    "current_medications": [
+      "Pregabalin 75mg",
+      "Meloxicam 15mg"
+    ],
+    "comorbidities": [
+      "Depression",
+      "Hypothyroidism"
+    ],
+    "employment_status": "Retired",
+    "education_level": "Associate degree",
+    "motivation_level": "low",
+    "adherence_probability": 0.3999999999999999,
+    "improvement_potential": "poor"
+  },
+  {
+    "id": 4,
+    "first_name": "Daniel",
+    "last_name": "Williams",
+    "age": 64,
+    "gender": "Male",
+    "primary_condition": "Shoulder Rotator Cuff Injury",
+    "pain_locations": [
+      "shoulder_right"
+    ],
+    "baseline_pain": 6,
+    "baseline_sleep": 6,
+    "baseline_fatigue": 7,
+    "baseline_anxiety": 3,
+    "baseline_function": 4,
+    "current_medications": [
+      "Gabapentin 300mg",
+      "Hydrocodone/APAP 5/325mg"
+    ],
+    "comorbidities": [
+      "Anxiety Disorder",
+      "Sleep Apnea",
+      "Depression"
+    ],
+    "employment_status": "Full-time employed",
+    "education_level": "Some college",
+    "motivation_level": "medium",
+    "adherence_probability": 0.5499999999999999,
+    "improvement_potential": "poor"
+  },
+  {
+    "id": 5,
+    "first_name": "Susan",
+    "last_name": "Rodriguez",
+    "age": 42,
+    "gender": "Female",
+    "primary_condition": "Scleroderma",
+    "pain_locations": [
+      "hand_left",
+      "hand_right"
+    ],
+    "baseline_pain": 5,
+    "baseline_sleep": 7,
+    "baseline_fatigue": 6,
+    "baseline_anxiety": 4,
+    "baseline_function": 5,
+    "current_medications": [
+      "Pregabalin 75mg",
+      "Gabapentin 300mg",
+      "Cyclobenzaprine 10mg"
+    ],
+    "comorbidities": [],
+    "employment_status": "Full-time employed",
+    "education_level": "Some college",
+    "motivation_level": "high",
+    "adherence_probability": 0.8999999999999999,
+    "improvement_potential": "excellent"
+  },
+  {
+    "id": 6,
+    "first_name": "Lisa",
+    "last_name": "Jackson",
+    "age": 63,
+    "gender": "Female",
+    "primary_condition": "Hip Osteoarthritis",
+    "pain_locations": [
+      "hip_left",
+      "hip_right"
+    ],
+    "baseline_pain": 7,
+    "baseline_sleep": 4,
+    "baseline_fatigue": 5,
+    "baseline_anxiety": 4,
+    "baseline_function": 6,
+    "current_medications": [
+      "Naproxen 500mg",
+      "Ibuprofen 400mg"
+    ],
+    "comorbidities": [
+      "Depression",
+      "Sleep Apnea"
+    ],
+    "employment_status": "Unemployed due to disability",
+    "education_level": "Bachelor's degree",
+    "motivation_level": "medium",
+    "adherence_probability": 0.6,
+    "improvement_potential": "poor"
+  },
+  {
+    "id": 7,
+    "first_name": "Karen",
+    "last_name": "Anderson",
+    "age": 41,
+    "gender": "Female",
+    "primary_condition": "Lupus (SLE)",
+    "pain_locations": [
+      "hand_left",
+      "hand_right",
+      "knee_left",
+      "knee_right"
+    ],
+    "baseline_pain": 7,
+    "baseline_sleep": 5,
+    "baseline_fatigue": 5,
+    "baseline_anxiety": 6,
+    "baseline_function": 6,
+    "current_medications": [
+      "Meloxicam 15mg"
+    ],
+    "comorbidities": [
+      "Obesity (BMI > 30)",
+      "GERD"
+    ],
+    "employment_status": "Part-time employed",
+    "education_level": "Associate degree",
+    "motivation_level": "medium",
+    "adherence_probability": 0.6,
+    "improvement_potential": "fair"
+  },
+  {
+    "id": 8,
+    "first_name": "Joseph",
+    "last_name": "Smith",
+    "age": 65,
+    "gender": "Male",
+    "primary_condition": "Chronic Low Back Pain",
+    "pain_locations": [
+      "lower_back"
+    ],
+    "baseline_pain": 7,
+    "baseline_sleep": 5,
+    "baseline_fatigue": 5,
+    "baseline_anxiety": 6,
+    "baseline_function": 4,
+    "current_medications": [
+      "Hydrocodone/APAP 5/325mg",
+      "Meloxicam 15mg",
+      "Duloxetine 60mg"
+    ],
+    "comorbidities": [
+      "Depression",
+      "Hypothyroidism"
+    ],
+    "employment_status": "Retired",
+    "education_level": "Some college",
+    "motivation_level": "medium",
+    "adherence_probability": 0.6,
+    "improvement_potential": "poor"
+  },
+  {
+    "id": 9,
+    "first_name": "Sarah",
+    "last_name": "Smith",
+    "age": 44,
+    "gender": "Female",
+    "primary_condition": "Lupus (SLE)",
+    "pain_locations": [
+      "hand_left",
+      "hand_right",
+      "knee_left",
+      "knee_right"
+    ],
+    "baseline_pain": 7,
+    "baseline_sleep": 4,
+    "baseline_fatigue": 5,
+    "baseline_anxiety": 4,
+    "baseline_function": 5,
+    "current_medications": [
+      "Tramadol 50mg",
+      "Ibuprofen 400mg"
+    ],
+    "comorbidities": [
+      "Diabetes Type 2"
+    ],
+    "employment_status": "Unemployed due to disability",
+    "education_level": "Bachelor's degree",
+    "motivation_level": "high",
+    "adherence_probability": 0.8499999999999999,
+    "improvement_potential": "good"
+  },
+  {
+    "id": 10,
+    "first_name": "Sarah",
+    "last_name": "Jones",
+    "age": 54,
+    "gender": "Female",
+    "primary_condition": "Osteoarthritis (Knees)",
+    "pain_locations": [
+      "knee_left",
+      "knee_right"
+    ],
+    "baseline_pain": 7,
+    "baseline_sleep": 5,
+    "baseline_fatigue": 5,
+    "baseline_anxiety": 5,
+    "baseline_function": 6,
+    "current_medications": [
+      "Gabapentin 300mg",
+      "Tramadol 50mg",
+      "Duloxetine 60mg"
+    ],
+    "comorbidities": [
+      "Anxiety Disorder",
+      "Sleep Apnea"
+    ],
+    "employment_status": "On medical leave",
+    "education_level": "Bachelor's degree",
+    "motivation_level": "high",
+    "adherence_probability": 0.7999999999999999,
+    "improvement_potential": "fair"
+  },
+  {
+    "id": 11,
+    "first_name": "Jessica",
+    "last_name": "Taylor",
+    "age": 64,
+    "gender": "Female",
+    "primary_condition": "Osteoarthritis (Knees)",
+    "pain_locations": [
+      "knee_left",
+      "knee_right"
+    ],
+    "baseline_pain": 4,
+    "baseline_sleep": 5,
+    "baseline_fatigue": 3,
+    "baseline_anxiety": 2,
+    "baseline_function": 7,
+    "current_medications": [
+      "Amitriptyline 25mg"
+    ],
+    "comorbidities": [
+      "Anxiety Disorder"
+    ],
+    "employment_status": "Full-time employed",
+    "education_level": "High school diploma",
+    "motivation_level": "medium",
+    "adherence_probability": 0.6499999999999999,
+    "improvement_potential": "good"
+  },
+  {
+    "id": 12,
+    "first_name": "John",
+    "last_name": "Johnson",
+    "age": 56,
+    "gender": "Male",
+    "primary_condition": "Post-Surgical Pain",
+    "pain_locations": [
+      "lower_back",
+      "shoulder_right"
+    ],
+    "baseline_pain": 6,
+    "baseline_sleep": 6,
+    "baseline_fatigue": 5,
+    "baseline_anxiety": 4,
+    "baseline_function": 6,
+    "current_medications": [
+      "Tramadol 50mg",
+      "Duloxetine 60mg"
+    ],
+    "comorbidities": [],
+    "employment_status": "Self-employed",
+    "education_level": "Graduate degree",
+    "motivation_level": "medium",
+    "adherence_probability": 0.7,
+    "improvement_potential": "fair"
+  },
+  {
+    "id": 13,
+    "first_name": "Margaret",
+    "last_name": "Wilson",
+    "age": 56,
+    "gender": "Female",
+    "primary_condition": "Osteoarthritis (Knees)",
+    "pain_locations": [
+      "knee_left",
+      "knee_right"
+    ],
+    "baseline_pain": 4,
+    "baseline_sleep": 5,
+    "baseline_fatigue": 5,
+    "baseline_anxiety": 3,
+    "baseline_function": 7,
+    "current_medications": [
+      "Gabapentin 300mg",
+      "Pregabalin 75mg"
+    ],
+    "comorbidities": [
+      "Hypertension",
+      "Sleep Apnea"
+    ],
+    "employment_status": "Self-employed",
+    "education_level": "High school diploma",
+    "motivation_level": "low",
+    "adherence_probability": 0.3999999999999999,
+    "improvement_potential": "fair"
+  },
+  {
+    "id": 14,
+    "first_name": "Margaret",
+    "last_name": "Brown",
+    "age": 47,
+    "gender": "Female",
+    "primary_condition": "Cervical Spine Disorder",
+    "pain_locations": [
+      "neck",
+      "shoulder_left",
+      "shoulder_right"
+    ],
+    "baseline_pain": 6,
+    "baseline_sleep": 4,
+    "baseline_fatigue": 7,
+    "baseline_anxiety": 4,
+    "baseline_function": 4,
+    "current_medications": [
+      "Acetaminophen 500mg",
+      "Hydrocodone/APAP 5/325mg"
+    ],
+    "comorbidities": [
+      "Diabetes Type 2"
+    ],
+    "employment_status": "Part-time employed",
+    "education_level": "Graduate degree",
+    "motivation_level": "low",
+    "adherence_probability": 0.44999999999999996,
+    "improvement_potential": "fair"
+  },
+  {
+    "id": 15,
+    "first_name": "Sarah",
+    "last_name": "Smith",
+    "age": 42,
+    "gender": "Female",
+    "primary_condition": "Rheumatoid Arthritis",
+    "pain_locations": [
+      "hand_left",
+      "hand_right",
+      "wrist_left",
+      "wrist_right"
+    ],
+    "baseline_pain": 6,
+    "baseline_sleep": 4,
+    "baseline_fatigue": 6,
+    "baseline_anxiety": 4,
+    "baseline_function": 5,
+    "current_medications": [
+      "Gabapentin 300mg"
+    ],
+    "comorbidities": [
+      "Depression",
+      "Anxiety Disorder",
+      "Hypertension"
+    ],
+    "employment_status": "Part-time employed",
+    "education_level": "Associate degree",
+    "motivation_level": "high",
+    "adherence_probability": 0.7499999999999999,
+    "improvement_potential": "fair"
+  },
+  {
+    "id": 16,
+    "first_name": "Elizabeth",
+    "last_name": "Wilson",
+    "age": 57,
+    "gender": "Female",
+    "primary_condition": "Fibromyalgia",
+    "pain_locations": [
+      "whole_body"
+    ],
+    "baseline_pain": 9,
+    "baseline_sleep": 1,
+    "baseline_fatigue": 7,
+    "baseline_anxiety": 6,
+    "baseline_function": 2,
+    "current_medications": [
+      "Amitriptyline 25mg"
+    ],
+    "comorbidities": [
+      "Hypertension",
+      "Sleep Apnea"
+    ],
+    "employment_status": "On medical leave",
+    "education_level": "High school diploma",
+    "motivation_level": "low",
+    "adherence_probability": 0.3999999999999999,
+    "improvement_potential": "poor"
+  },
+  {
+    "id": 17,
+    "first_name": "Sandra",
+    "last_name": "Taylor",
+    "age": 45,
+    "gender": "Female",
+    "primary_condition": "Rheumatoid Arthritis",
+    "pain_locations": [
+      "hand_left",
+      "hand_right",
+      "wrist_left",
+      "wrist_right"
+    ],
+    "baseline_pain": 5,
+    "baseline_sleep": 7,
+    "baseline_fatigue": 4,
+    "baseline_anxiety": 3,
+    "baseline_function": 5,
+    "current_medications": [
+      "Naproxen 500mg",
+      "Meloxicam 15mg",
+      "Tramadol 50mg"
+    ],
+    "comorbidities": [
+      "Anxiety Disorder"
+    ],
+    "employment_status": "Self-employed",
+    "education_level": "Graduate degree",
+    "motivation_level": "low",
+    "adherence_probability": 0.44999999999999996,
+    "improvement_potential": "good"
+  },
+  {
+    "id": 18,
+    "first_name": "Daniel",
+    "last_name": "Jackson",
+    "age": 53,
+    "gender": "Male",
+    "primary_condition": "Fibromyalgia",
+    "pain_locations": [
+      "whole_body"
+    ],
+    "baseline_pain": 8,
+    "baseline_sleep": 3,
+    "baseline_fatigue": 6,
+    "baseline_anxiety": 6,
+    "baseline_function": 5,
+    "current_medications": [
+      "Tramadol 50mg",
+      "Hydrocodone/APAP 5/325mg"
+    ],
+    "comorbidities": [
+      "Obesity (BMI > 30)"
+    ],
+    "employment_status": "On medical leave",
+    "education_level": "Associate degree",
+    "motivation_level": "high",
+    "adherence_probability": 0.8499999999999999,
+    "improvement_potential": "fair"
+  },
+  {
+    "id": 19,
+    "first_name": "Mary",
+    "last_name": "Anderson",
+    "age": 59,
+    "gender": "Female",
+    "primary_condition": "Cervical Spine Disorder",
+    "pain_locations": [
+      "neck",
+      "shoulder_left",
+      "shoulder_right"
+    ],
+    "baseline_pain": 5,
+    "baseline_sleep": 5,
+    "baseline_fatigue": 6,
+    "baseline_anxiety": 3,
+    "baseline_function": 7,
+    "current_medications": [
+      "Acetaminophen 500mg",
+      "Oxycodone 5mg"
+    ],
+    "comorbidities": [
+      "Anxiety Disorder",
+      "Depression"
+    ],
+    "employment_status": "Part-time employed",
+    "education_level": "Some college",
+    "motivation_level": "low",
+    "adherence_probability": 0.3999999999999999,
+    "improvement_potential": "fair"
+  },
+  {
+    "id": 20,
+    "first_name": "Elizabeth",
+    "last_name": "Martin",
+    "age": 65,
+    "gender": "Female",
+    "primary_condition": "Cervical Spine Disorder",
+    "pain_locations": [
+      "neck",
+      "shoulder_left",
+      "shoulder_right"
+    ],
+    "baseline_pain": 5,
+    "baseline_sleep": 7,
+    "baseline_fatigue": 6,
+    "baseline_anxiety": 4,
+    "baseline_function": 7,
+    "current_medications": [
+      "Acetaminophen 500mg"
+    ],
+    "comorbidities": [
+      "Diabetes Type 2"
+    ],
+    "employment_status": "Retired",
+    "education_level": "Graduate degree",
+    "motivation_level": "medium",
+    "adherence_probability": 0.6499999999999999,
+    "improvement_potential": "good"
+  },
+  {
+    "id": 21,
+    "first_name": "Michael",
+    "last_name": "Hernandez",
+    "age": 48,
+    "gender": "Male",
+    "primary_condition": "Post-Surgical Pain",
+    "pain_locations": [
+      "lower_back",
+      "shoulder_right"
+    ],
+    "baseline_pain": 8,
+    "baseline_sleep": 4,
+    "baseline_fatigue": 7,
+    "baseline_anxiety": 5,
+    "baseline_function": 3,
+    "current_medications": [
+      "Meloxicam 15mg"
+    ],
+    "comorbidities": [
+      "Obesity (BMI > 30)"
+    ],
+    "employment_status": "Unemployed due to disability",
+    "education_level": "High school diploma",
+    "motivation_level": "medium",
+    "adherence_probability": 0.6499999999999999,
+    "improvement_potential": "fair"
+  },
+  {
+    "id": 22,
+    "first_name": "William",
+    "last_name": "Garcia",
+    "age": 63,
+    "gender": "Male",
+    "primary_condition": "Scleroderma",
+    "pain_locations": [
+      "hand_left",
+      "hand_right"
+    ],
+    "baseline_pain": 7,
+    "baseline_sleep": 5,
+    "baseline_fatigue": 7,
+    "baseline_anxiety": 5,
+    "baseline_function": 6,
+    "current_medications": [
+      "Naproxen 500mg"
+    ],
+    "comorbidities": [],
+    "employment_status": "Part-time employed",
+    "education_level": "Some college",
+    "motivation_level": "high",
+    "adherence_probability": 0.8999999999999999,
+    "improvement_potential": "good"
+  },
+  {
+    "id": 23,
+    "first_name": "Karen",
+    "last_name": "Moore",
+    "age": 39,
+    "gender": "Female",
+    "primary_condition": "Chronic Low Back Pain",
+    "pain_locations": [
+      "lower_back"
+    ],
+    "baseline_pain": 8,
+    "baseline_sleep": 2,
+    "baseline_fatigue": 6,
+    "baseline_anxiety": 5,
+    "baseline_function": 4,
+    "current_medications": [
+      "Oxycodone 5mg"
+    ],
+    "comorbidities": [
+      "Anxiety Disorder"
+    ],
+    "employment_status": "Part-time employed",
+    "education_level": "High school diploma",
+    "motivation_level": "low",
+    "adherence_probability": 0.44999999999999996,
+    "improvement_potential": "poor"
+  },
+  {
+    "id": 24,
+    "first_name": "Betty",
+    "last_name": "Wilson",
+    "age": 54,
+    "gender": "Female",
+    "primary_condition": "Fibromyalgia",
+    "pain_locations": [
+      "whole_body"
+    ],
+    "baseline_pain": 7,
+    "baseline_sleep": 3,
+    "baseline_fatigue": 5,
+    "baseline_anxiety": 4,
+    "baseline_function": 5,
+    "current_medications": [
+      "Acetaminophen 500mg"
+    ],
+    "comorbidities": [
+      "Sleep Apnea",
+      "GERD"
+    ],
+    "employment_status": "On medical leave",
+    "education_level": "Some college",
+    "motivation_level": "medium",
+    "adherence_probability": 0.6,
+    "improvement_potential": "poor"
+  },
+  {
+    "id": 25,
+    "first_name": "Patricia",
+    "last_name": "Gonzalez",
+    "age": 62,
+    "gender": "Female",
+    "primary_condition": "Chronic Low Back Pain",
+    "pain_locations": [
+      "lower_back"
+    ],
+    "baseline_pain": 5,
+    "baseline_sleep": 6,
+    "baseline_fatigue": 4,
+    "baseline_anxiety": 3,
+    "baseline_function": 6,
+    "current_medications": [
+      "Hydrocodone/APAP 5/325mg",
+      "Tramadol 50mg"
+    ],
+    "comorbidities": [
+      "Anxiety Disorder"
+    ],
+    "employment_status": "Part-time employed",
+    "education_level": "Associate degree",
+    "motivation_level": "low",
+    "adherence_probability": 0.44999999999999996,
+    "improvement_potential": "fair"
+  }
+]

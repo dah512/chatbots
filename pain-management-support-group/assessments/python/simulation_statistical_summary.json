@@ -1,0 +1,81 @@
+{
+  "simulation_info": {
+    "n_patients": 2,
+    "simulation_date": "2025-12-09T18:00:55.926906",
+    "analysis_version": "1.0"
+  },
+  "pain_outcomes": {
+    "mean_w1": 6.285714285714286,
+    "mean_w8": 4.5,
+    "mean_change": -1.7857142857142856,
+    "sd_change": 1.3131983079178744,
+    "t_statistic": -1.9230769230769225,
+    "p_value": 0.30527146251419035,
+    "ci_lower": -13.584332969544093,
+    "ci_upper": 10.01290439811552,
+    "cohens_d": -1.3598207330510523,
+    "n": 2
+  },
+  "other_outcomes": {
+    "sleep": {
+      "mean_w1": 4.5,
+      "mean_w8": 6.166666666666666,
+      "mean_change": 1.6666666666666665,
+      "sd_change": 1.3468700594029472,
+      "t_statistic": 1.7500000000000004,
+      "p_value": 0.33049868107713565,
+      "ci_lower": -10.434480701363896,
+      "ci_upper": 13.767814034697228,
+      "cohens_d": 1.2374368670764584,
+      "n": 2
+    },
+    "fatigue": {
+      "mean_w1": 5.428571428571429,
+      "mean_w8": 4.333333333333334,
+      "mean_change": -1.095238095238095,
+      "sd_change": 0.26937401188058985,
+      "t_statistic": -5.749999999999992,
+      "p_value": 0.10962007714538198,
+      "ci_lower": -3.515467568844211,
+      "ci_upper": 1.3249913783680212,
+      "cohens_d": -4.065863991822642,
+      "n": 2
+    },
+    "anxiety": {
+      "mean_w1": 3.9285714285714284,
+      "mean_w8": 3.333333333333333,
+      "mean_change": -0.5952380952380951,
+      "sd_change": 0.437732769305958,
+      "t_statistic": -1.9230769230769227,
+      "p_value": 0.30527146251419035,
+      "ci_lower": -4.528110989848029,
+      "ci_upper": 3.3376347993718394,
+      "cohens_d": -1.3598207330510526,
+      "n": 2
+    },
+    "function": {
+      "mean_w1": 5.428571428571429,
+      "mean_w8": 7.333333333333334,
+      "mean_change": 1.904761904761905,
+      "sd_change": 0.13468700594029429,
+      "t_statistic": 20.000000000000075,
+      "p_value": 0.031804502512352624,
+      "ci_lower": 0.6946471679588528,
+      "ci_upper": 3.1148766415649574,
+      "cohens_d": 14.142135623731004,
+      "n": 2
+    }
+  },
+  "knowledge_outcomes": {
+    "mean_weekly_gain": 22.6,
+    "overall_mean_gain": 29.88,
+    "overall_median_gain": 27.0
+  },
+  "responder_analysis": {
+    "strong_responders": 1,
+    "modest_responders": 1,
+    "no_change": 0,
+    "non_responders": 0,
+    "improvement_rate": 100.0
+  }
+}
