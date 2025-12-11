@@ -155,16 +155,20 @@ if [ ! -f ".env" ]; then
         read -rs api_key
         
         if [ -n "$api_key" ]; then
-            # Basic validation: Anthropic API keys typically start with 'sk-ant-'
-            if [[ "$api_key" =~ ^sk-ant- ]]; then
+            # Validate API key format: Anthropic keys start with 'sk-ant-' and have typical length of 40-100 chars
+            if [[ "$api_key" =~ ^sk-ant-[a-zA-Z0-9_-]{32,96}$ ]]; then
                 echo "ANTHROPIC_API_KEY=$api_key" > .env
                 # Secure the .env file - only owner can read/write
                 chmod 600 .env
+                # Clear the key from memory for security
+                unset api_key
                 display_success "API key saved to .env file"
                 display_tip "Your API key is stored securely and will not be committed to git"
             else
-                display_error "Invalid API key format. Anthropic API keys start with 'sk-ant-'"
+                display_error "Invalid API key format. Expected format: sk-ant-[alphanumeric]"
                 display_info "You can set up your API key later in the app's sidebar"
+                # Clear the invalid key from memory
+                unset api_key
             fi
         else
             display_info "No API key entered. You can set it up later in the app"
