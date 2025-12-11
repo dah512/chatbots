@@ -95,7 +95,7 @@ display_step "3" "Setting Up Virtual Environment"
 if [ ! -d "venv" ]; then
     display_info "A virtual environment isolates project dependencies"
     echo "Creating virtual environment..."
-    if python3 -m venv venv; then
+    if python3 -m venv venv && [ -d "venv" ]; then
         display_success "Virtual environment created successfully"
     else
         display_error "Failed to create virtual environment"
@@ -109,7 +109,9 @@ wait_for_user
 # Activate virtual environment
 display_step "4" "Activating Virtual Environment"
 echo "Activating virtual environment..."
-if source venv/bin/activate; then
+source venv/bin/activate
+# Verify activation by checking VIRTUAL_ENV variable
+if [ -n "$VIRTUAL_ENV" ]; then
     display_success "Virtual environment activated"
 else
     display_error "Failed to activate virtual environment"
@@ -155,8 +157,9 @@ if [ ! -f ".env" ]; then
         read -rs api_key
         
         if [ -n "$api_key" ]; then
-            # Validate API key format: Anthropic keys start with 'sk-ant-' and have typical length of 40-100 chars
-            if [[ "$api_key" =~ ^sk-ant-[a-zA-Z0-9_-]{32,96}$ ]]; then
+            # Validate API key format: Anthropic keys start with 'sk-ant-' and have reasonable length
+            # More flexible validation to accommodate format changes
+            if [[ "$api_key" =~ ^sk-ant-.{30,}$ ]]; then
                 echo "ANTHROPIC_API_KEY=$api_key" > .env
                 # Secure the .env file - only owner can read/write
                 chmod 600 .env
@@ -165,7 +168,7 @@ if [ ! -f ".env" ]; then
                 display_success "API key saved to .env file"
                 display_tip "Your API key is stored securely and will not be committed to git"
             else
-                display_error "Invalid API key format. Expected format: sk-ant-[alphanumeric]"
+                display_error "Invalid API key format. Expected: sk-ant-[key] with minimum length"
                 display_info "You can set up your API key later in the app's sidebar"
                 # Clear the invalid key from memory
                 unset api_key
