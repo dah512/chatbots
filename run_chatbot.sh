@@ -95,8 +95,7 @@ display_step "3" "Setting Up Virtual Environment"
 if [ ! -d "venv" ]; then
     display_info "A virtual environment isolates project dependencies"
     echo "Creating virtual environment..."
-    python3 -m venv venv
-    if [ $? -eq 0 ]; then
+    if python3 -m venv venv; then
         display_success "Virtual environment created successfully"
     else
         display_error "Failed to create virtual environment"
@@ -110,8 +109,7 @@ wait_for_user
 # Activate virtual environment
 display_step "4" "Activating Virtual Environment"
 echo "Activating virtual environment..."
-source venv/bin/activate
-if [ $? -eq 0 ]; then
+if source venv/bin/activate; then
     display_success "Virtual environment activated"
 else
     display_error "Failed to activate virtual environment"
@@ -124,9 +122,7 @@ display_step "5" "Installing Dependencies"
 display_info "Installing required packages: streamlit, anthropic, python-dotenv"
 echo "This may take a few moments..."
 echo ""
-pip install -q --upgrade pip
-pip install -q -r requirements.txt
-if [ $? -eq 0 ]; then
+if pip install -q --upgrade pip && pip install -q -r requirements.txt; then
     display_success "All dependencies installed successfully"
 else
     display_error "Failed to install dependencies"
@@ -159,9 +155,17 @@ if [ ! -f ".env" ]; then
         read -rs api_key
         
         if [ -n "$api_key" ]; then
-            echo "ANTHROPIC_API_KEY=$api_key" > .env
-            display_success "API key saved to .env file"
-            display_tip "Your API key is stored securely and will not be committed to git"
+            # Basic validation: Anthropic API keys typically start with 'sk-ant-'
+            if [[ "$api_key" =~ ^sk-ant- ]]; then
+                echo "ANTHROPIC_API_KEY=$api_key" > .env
+                # Secure the .env file - only owner can read/write
+                chmod 600 .env
+                display_success "API key saved to .env file"
+                display_tip "Your API key is stored securely and will not be committed to git"
+            else
+                display_error "Invalid API key format. Anthropic API keys start with 'sk-ant-'"
+                display_info "You can set up your API key later in the app's sidebar"
+            fi
         else
             display_info "No API key entered. You can set it up later in the app"
         fi
