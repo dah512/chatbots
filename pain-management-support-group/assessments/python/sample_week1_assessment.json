@@ -8,19 +8,19 @@
   "time_limit_minutes": 30,
   "questions": [
     {
-      "id": "w1_q1",
-      "text": "What is the primary difference between acute and chronic pain?",
+      "id": "w1_q2",
+      "text": "Which nerve fibers are responsible for transmitting sharp, localized pain?",
       "type": "multiple_choice",
       "options": [
-        "A. Acute pain is worse than chronic pain",
-        "B. Acute pain serves a protective function while chronic pain persists beyond healing",
-        "C. Chronic pain only occurs in elderly people",
-        "D. There is no difference"
+        "A. C-fibers",
+        "B. A-delta fibers",
+        "C. Motor neurons",
+        "D. Sympathetic fibers"
       ],
       "correct_answer": "B",
-      "explanation": "Acute pain is a warning signal that protects us from harm, while chronic pain persists beyond the expected healing time and may not serve a protective purpose.",
-      "topic": "Pain Science",
-      "difficulty": "easy",
+      "explanation": "A-delta fibers are myelinated and transmit sharp, well-localized pain quickly. C-fibers transmit dull, aching pain more slowly.",
+      "topic": "Nerve Anatomy",
+      "difficulty": "medium",
       "points": 1
     },
     {
@@ -40,19 +40,19 @@
       "points": 1
     },
     {
-      "id": "w1_q2",
-      "text": "Which nerve fibers are responsible for transmitting sharp, localized pain?",
+      "id": "w1_q1",
+      "text": "What is the primary difference between acute and chronic pain?",
       "type": "multiple_choice",
       "options": [
-        "A. C-fibers",
-        "B. A-delta fibers",
-        "C. Motor neurons",
-        "D. Sympathetic fibers"
+        "A. Acute pain is worse than chronic pain",
+        "B. Acute pain serves a protective function while chronic pain persists beyond healing",
+        "C. Chronic pain only occurs in elderly people",
+        "D. There is no difference"
       ],
       "correct_answer": "B",
-      "explanation": "A-delta fibers are myelinated and transmit sharp, well-localized pain quickly. C-fibers transmit dull, aching pain more slowly.",
-      "topic": "Nerve Anatomy",
-      "difficulty": "medium",
+      "explanation": "Acute pain is a warning signal that protects us from harm, while chronic pain persists beyond the expected healing time and may not serve a protective purpose.",
+      "topic": "Pain Science",
+      "difficulty": "easy",
       "points": 1
     },
     {
