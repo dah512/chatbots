@@ -1,3 +1,13 @@
+# 🤖 AI Applications Portfolio
+
+Welcome to the AI Applications Portfolio! This repository contains multiple AI-powered applications designed to enhance learning, healthcare, and productivity.
+
+## 🌐 Landing Page
+
+Visit [index.html](./index.html) for an interactive showcase of all applications with animated previews and descriptions.
+
+---
+
 # 🔬 Scientific Chatbot - Claude AI Powered
 
 A comprehensive, interactive scientific chatbot that provides expert answers to academic and professional queries across multiple scientific domains. Built with Python, Streamlit, and powered by Claude AI (Sonnet 4.5).
