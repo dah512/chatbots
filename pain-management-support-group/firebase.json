@@ -1,0 +1,84 @@
+{
+  "hosting": {
+    "public": "presentation_export",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**",
+      "**/*.py",
+      "**/*.sh"
+    ],
+    "headers": [
+      {
+        "source": "**/*.@(jpg|jpeg|gif|png|svg|webp)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=7200"
+          }
+        ]
+      },
+      {
+        "source": "**/*.@(js|css)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=3600"
+          }
+        ]
+      },
+      {
+        "source": "**/*.@(json)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=300"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json; charset=utf-8"
+          }
+        ]
+      },
+      {
+        "source": "**/*.@(html)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=600"
+          }
+        ]
+      }
+    ],
+    "rewrites": [
+      {
+        "source": "/",
+        "destination": "/index.html"
+      }
+    ],
+    "redirects": [
+      {
+        "source": "/docs",
+        "destination": "/documentation/platform_overview.html",
+        "type": 301
+      },
+      {
+        "source": "/manual",
+        "destination": "/documentation/student_manual___patient_guide.html",
+        "type": 301
+      },
+      {
+        "source": "/results",
+        "destination": "/documentation/simulation_results_report.html",
+        "type": 301
+      },
+      {
+        "source": "/start",
+        "destination": "/documentation/quick_start_guide.html",
+        "type": 301
+      }
+    ],
+    "cleanUrls": true,
+    "trailingSlash": false
+  }
+}
