@@ -1,0 +1,64 @@
+{
+  "export_date": "2026-11-20T03:22:53.260865",
+  "platform_version": "1.0.0",
+  "documents": [
+    {
+      "title": "Platform Overview",
+      "filename": "platform_overview.html",
+      "size": 25564
+    },
+    {
+      "title": "Quick Start Guide",
+      "filename": "quick_start_guide.html",
+      "size": 25056
+    },
+    {
+      "title": "Platform Status Report",
+      "filename": "platform_status_report.html",
+      "size": 17402
+    },
+    {
+      "title": "Student Manual - Patient Guide",
+      "filename": "student_manual___patient_guide.html",
+      "size": 36539
+    },
+    {
+      "title": "Technical Manual - Developer Guide",
+      "filename": "technical_manual___developer_guide.html",
+      "size": 86179
+    },
+    {
+      "title": "System Architecture",
+      "filename": "system_architecture.html",
+      "size": 17395
+    },
+    {
+      "title": "8-Week Curriculum",
+      "filename": "8_week_curriculum.html",
+      "size": 57240
+    },
+    {
+      "title": "Simulation Results Report",
+      "filename": "simulation_results_report.html",
+      "size": 18999
+    },
+    {
+      "title": "Pain Medication Statistics",
+      "filename": "pain_medication_statistics.html",
+      "size": 25895
+    },
+    {
+      "title": "Global Support Groups Comparison",
+      "filename": "global_support_groups_comparison.html",
+      "size": 43357
+    },
+    {
+      "title": "Alternative Therapies Guide",
+      "filename": "alternative_therapies_guide.html",
+      "size": 34602
+    }
+  ],
+  "visualizations": 6,
+  "data_files": 5,
+  "total_size_kb": 379
+}

@@ -1,0 +1,2966 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Manual - Developer Guide</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+            line-height: 1.6;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            color: #333;
+            background: #fff;
+        }
+
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #34495e;
+            border-bottom: 2px solid #95a5a6;
+            padding-bottom: 8px;
+            margin-top: 40px;
+        }
+
+        h3 {
+            color: #34495e;
+            margin-top: 30px;
+        }
+
+        h4 {
+            color: #7f8c8d;
+            margin-top: 20px;
+        }
+
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Monaco', 'Courier New', monospace;
+            font-size: 0.9em;
+            color: #c7254e;
+        }
+
+        pre {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 20px;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+
+        pre code {
+            background: none;
+            color: inherit;
+            padding: 0;
+        }
+
+        ul, ol {
+            margin: 15px 0;
+            padding-left: 30px;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px 0;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background: #3498db;
+            color: white;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        hr {
+            border: none;
+            border-top: 2px solid #ecf0f1;
+            margin: 40px 0;
+        }
+
+        blockquote {
+            border-left: 4px solid #3498db;
+            margin: 20px 0;
+            padding: 10px 20px;
+            background: #f8f9fa;
+            font-style: italic;
+        }
+
+        .header-info {
+            background: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+
+        .header-info strong {
+            color: #2c3e50;
+        }
+
+        @media print {
+            body {
+                max-width: none;
+                padding: 20px;
+            }
+
+            pre {
+                page-break-inside: avoid;
+            }
+
+            h1, h2, h3 {
+                page-break-after: avoid;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 20px 10px;
+            }
+
+            pre {
+                padding: 10px;
+                font-size: 0.85em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header-info">
+        <strong>Pain Management Support Group Platform</strong><br>
+        Generated: November 20, 2026 at 03:22 AM<br>
+        Document: Technical Manual - Developer Guide
+    </div>
+
+    <p># Pain Management Support Group Platform
+<h2>Complete Technical and Programming Manual</h1></h2></h3></h4></p>
+
+<strong>Version 1.0</strong></h1></h2></h3></h4>
+
+<p>---</h1></h2></h3></h4></p>
+
+<h2>Table of Contents</h1></h2></h3></h4>
+
+<ol>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#system-architecture">System Architecture</a></li>
+<li><a href="#technology-stack">Technology Stack</a></li>
+<li><a href="#development-environment-setup">Development Environment Setup</a></li>
+<li><a href="#database-architecture">Database Architecture</a></li>
+<li><a href="#backend-api-documentation">Backend API Documentation</a></li>
+<li><a href="#rag-system-implementation">RAG System Implementation</a></li>
+<li><a href="#assessment-and-analytics">Assessment and Analytics</a></li>
+<li><a href="#frontend-development">Frontend Development</a></li>
+</ul>
+10. <a href="#deployment">Deployment</a>
+11. <a href="#security-and-compliance">Security and Compliance</a>
+12. <a href="#testing">Testing</a>
+13. <a href="#maintenance-and-monitoring">Maintenance and Monitoring</a>
+14. <a href="#troubleshooting">Troubleshooting</a>
+15. <a href="#contributing-guidelines">Contributing Guidelines</a>
+16. <a href="#api-reference">API Reference</a></h1></h2></h3></h4>
+
+<p>---</h1></h2></h3></h4></p>
+
+<h2>Introduction</h1></h2></h3></h4>
+
+<h3>Purpose</h1></h2></h3></h4>
+
+<p>This technical manual provides comprehensive documentation for developers, DevOps engineers, and technical facilitators working on the Pain Management Support Group platform.</h1></h2></h3></h4></p>
+
+<h3>Audience</h1></h2></h3></h4>
+
+<ul>
+<li><strong>Backend Developers</strong>: Python/FastAPI development</li>
+<li><strong>Frontend Developers</strong>: React/TypeScript development</li>
+<li><strong>DevOps Engineers</strong>: Deployment and infrastructure</li>
+<li><strong>Data Scientists</strong>: Analytics and research</li>
+<li><strong>Technical Facilitators</strong>: Platform administration</h1></h2></h3></h4></li>
+</ul>
+
+<h3>Document Conventions</h1></h2></h3></h4>
+
+<pre><code><h1>Code blocks show working examples
+def example_function():
+    pass
+</code></pre></h1></h2></h3></h4>
+
+<strong>Bold text</strong>: Important concepts or warnings
+<em>Italic text</em>: File paths or variable names
+<code>inline code</code>: Commands or code snippets</h1></h2></h3></h4>
+
+<p>---</h1></h2></h3></h4></p>
+
+<h2>System Architecture</h1></h2></h3></h4>
+
+<h3>High-Level Overview</h1></h2></h3></h4>
+
+<pre><code>┌─────────────────┐
+│   React Frontend│
+│   (Port 3000)   │
+└────────┬────────┘
+         │ HTTP/REST
+         ▼
+┌─────────────────┐
+│  FastAPI Backend│◄───┐
+│   (Port 8000)   │    │
+└────┬────┬───┬───┘    │
+     │    │   │        │
+     │    │   │    ┌───┴─────┐
+     │    │   │    │ Celery  │
+     │    │   │    │ Worker  │
+     │    │   │    └───┬─────┘
+     │    │   │        │
+     ▼    ▼   ▼        ▼
+┌────────┐┌──────┐┌────────┐
+│Postgres││Redis ││Pinecone│
+│  DB    ││Cache ││/Chroma │
+└────────┘└──────┘└────────┘
+</code></pre></h1></h2></h3></h4>
+
+<h3>Component Description</h1></h2></h3></h4>
+
+<strong>Frontend (React):</strong>
+<ul>
+<li>User interface for patients and facilitators</li>
+<li>State management with Context API/Redux</li>
+<li>Real-time updates</li>
+<li>Responsive design</h1></h2></h3></h4></li>
+</ul>
+
+<strong>Backend (FastAPI):</strong>
+<ul>
+<li>RESTful API server</li>
+<li>Authentication and authorization</li>
+<li>Business logic</li>
+<li>Database operations</li>
+<li>RAG orchestration</h1></h2></h3></h4></li>
+</ul>
+
+<strong>Database (PostgreSQL):</strong>
+<ul>
+<li>User data</li>
+<li>Curriculum content</li>
+<li>Pain logs and assessments</li>
+<li>Discussion forums</h1></h2></h3></h4></li>
+</ul>
+
+<strong>Cache (Redis):</strong>
+<ul>
+<li>Session storage</li>
+<li>API response caching</li>
+<li>Rate limiting</li>
+<li>Celery task queue</h1></h2></h3></h4></li>
+</ul>
+
+<strong>Vector Database (Pinecone/ChromaDB):</strong>
+<ul>
+<li>Document embeddings</li>
+<li>Semantic search</li>
+<li>RAG context retrieval</h1></h2></h3></h4></li>
+</ul>
+
+<strong>Background Workers (Celery):</strong>
+<ul>
+<li>Email notifications</li>
+<li>Report generation</li>
+<li>Document processing</li>
+<li>Scheduled tasks</h1></h2></h3></h4></li>
+</ul>
+
+<h3>Data Flow</h1></h2></h3></h4>
+
+<strong>User Authentication Flow:</strong>
+<pre><code>1. User submits credentials → Frontend
+<ol>
+<li>Frontend → POST /api/v1/auth/login → Backend</li>
+<li>Backend verifies credentials → Database</li>
+<li>Backend generates JWT token</li>
+<li>Backend → Token → Frontend</li>
+<li>Frontend stores token</li>
+<li>Frontend includes token in subsequent requests</li>
+</ul>
+</code></pre></h1></h2></h3></h4>
+
+<strong>RAG Query Flow:</strong>
+<pre><code>1. User asks question → Frontend
+<ol>
+<li>Frontend → POST /api/v1/rag/query → Backend</li>
+<li>Backend → Embedding Generation → OpenAI API</li>
+<li>Backend → Similarity Search → Vector DB</li>
+<li>Vector DB → Top K chunks → Backend</li>
+<li>Backend → LLM with context → OpenAI/Claude API</li>
+<li>LLM → Generated answer → Backend</li>
+<li>Backend → Save conversation → Database</li>
+<li>Backend → Response with sources → Frontend</li>
+</ul>
+</code></pre></h1></h2></h3></h4>
+
+<p>---</h1></h2></h3></h4></p>
+
+<h2>Technology Stack</h1></h2></h3></h4>
+
+<h3>Backend</h1></h2></h3></h4>
+
+<p>| Technology | Version | Purpose |
+<tr><td>------------|---------|---------</td></tr>
+<tr><td> Python | 3.11+ | Programming language </td></tr>
+<tr><td> FastAPI | 0.109+ | Web framework </td></tr>
+<tr><td> SQLAlchemy | 2.0+ | ORM </td></tr>
+<tr><td> Pydantic | 2.5+ | Data validation </td></tr>
+<tr><td> PostgreSQL | 15+ | Primary database </td></tr>
+<tr><td> Redis | 7+ | Cache and queue </td></tr>
+<tr><td> Celery | 5.3+ | Background tasks </td></tr>
+<tr><td> LangChain | 0.1+ | RAG orchestration </td></tr>
+<tr><td> OpenAI API | 1.10+ | LLM and embeddings </td></tr>
+<tr><td> Pinecone | 3.0+ | Vector database (option 1) </td></tr>
+<tr><td> ChromaDB | 0.4+ | Vector database (option 2) </td></tr></h1></h2></h3></h4></p>
+
+<h3>Frontend</h1></h2></h3></h4>
+
+<p>| Technology | Version | Purpose |
+<tr><td>------------|---------|---------</td></tr>
+<tr><td> React | 18+ | UI framework </td></tr>
+<tr><td> TypeScript | 5+ | Type safety </td></tr>
+<tr><td> React Router | 6+ | Routing </td></tr>
+<tr><td> Axios | 1+ | HTTP client </td></tr>
+<tr><td> Chart.js | 4+ | Visualizations </td></tr>
+<tr><td> TailwindCSS | 3+ | Styling </td></tr>
+<tr><td> Material-UI | 5+ | Component library </td></tr></h1></h2></h3></h4></p>
+
+<h3>DevOps</h1></h2></h3></h4>
+
+<p>| Technology | Version | Purpose |
+<tr><td>------------|---------|---------</td></tr>
+<tr><td> Docker | 24+ | Containerization </td></tr>
+<tr><td> Docker Compose | 2+ | Orchestration (dev) </td></tr>
+<tr><td> GitHub Actions | - | CI/CD </td></tr>
+<tr><td> Nginx | 1.25+ | Reverse proxy </td></tr></h1></h2></h3></h4></p>
+
+<h3>Analytics</h1></h2></h3></h4>
+
+<p>| Technology | Version | Purpose |
+<tr><td>------------|---------|---------</td></tr>
+<tr><td> Pandas | 2.1+ | Data analysis </td></tr>
+<tr><td> NumPy | 1.26+ | Numerical computing </td></tr>
+<tr><td> R | 4.3+ | Statistical analysis </td></tr>
+<tr><td> ggplot2 | 3.4+ | Visualizations </td></tr></h1></h2></h3></h4></p>
+
+<p>---</h1></h2></h3></h4></p>
+
+<h2>Development Environment Setup</h1></h2></h3></h4>
+
+<h3>Prerequisites</h1></h2></h3></h4>
+
+<p>Before starting, ensure you have:
+<ul>
+<li>Python 3.11 or higher</li>
+<li>Node.js 18 or higher</li>
+<li>PostgreSQL 15 or higher</li>
+<li>Redis 7 or higher</li>
+<li>Docker and Docker Compose (recommended)</li>
+<li>Git</h1></h2></h3></h4></li>
+</ul></p>
+
+<h3>Initial Setup</h1></h2></h3></h4>
+
+<h4>1. Clone Repository</h1></h2></h3></h4>
+
+<pre><code>git clone https://github.com/your-org/pain-management-support-group.git
+cd pain-management-support-group
+</code></pre></h1></h2></h3></h4>
+
+<h4>2. Environment Variables</h1></h2></h3></h4>
+
+<pre><code>cp .env.example .env
+</code></pre></h1></h2></h3></h4>
+
+<p>Edit <code>.env</code> with your settings:</h1></h2></h3></h4></p>
+
+<pre><code><h1>Required
+OPENAI_API_KEY=sk-your-key-here
+SECRET_KEY=generate-secure-random-key
+DATABASE_URL=postgresql://postgres:postgres@localhost:5432/pain_management</h1></h2></h3></h4>
+
+<h1>Optional (for Pinecone)
+PINECONE_API_KEY=your-key
+PINECONE_ENVIRONMENT=us-west1-gcp
+USE_PINECONE=true
+</code></pre></h1></h2></h3></h4>
+
+<strong>Generate SECRET_KEY:</strong>
+<pre><code>import secrets
+print(secrets.token_urlsafe(32))
+</code></pre></h1></h2></h3></h4>
+
+<h4>3. Docker Setup (Recommended)</h1></h2></h3></h4>
+
+<pre><code><h1>Start all services
+docker-compose up -d</h1></h2></h3></h4>
+
+<h1>Check status
+docker-compose ps</h1></h2></h3></h4>
+
+<h1>View logs
+docker-compose logs -f backend</h1></h2></h3></h4>
+
+<h1>Stop services
+docker-compose down
+</code></pre></h1></h2></h3></h4>
+
+<strong>Access Points:</strong>
+<ul>
+<li>Backend API: http://localhost:8000</li>
+<li>API Docs: http://localhost:8000/docs</li>
+<li>Frontend: http://localhost:3000</li>
+<li>PgAdmin: http://localhost:5050 (dev mode)</h1></h2></h3></h4></li>
+</ul>
+
+<h4>4. Manual Setup (Alternative)</h1></h2></h3></h4>
+
+<strong>Backend:</strong></h1></h2></h3></h4>
+
+<pre><code>cd backend</h1></h2></h3></h4>
+
+<h1>Create virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate</h1></h2></h3></h4>
+
+<h1>Install dependencies
+pip install -r requirements.txt</h1></h2></h3></h4>
+
+<h1>Set up database
+createdb pain_management</h1></h2></h3></h4>
+
+<h1>Run migrations
+alembic upgrade head</h1></h2></h3></h4>
+
+<h1>Seed data (optional)
+python scripts/seed_data.py</h1></h2></h3></h4>
+
+<h1>Start server
+uvicorn main:app --reload --host 0.0.0.0 --port 8000
+</code></pre></h1></h2></h3></h4>
+
+<strong>Frontend:</strong></h1></h2></h3></h4>
+
+<pre><code>cd frontend</h1></h2></h3></h4>
+
+<h1>Install dependencies
+npm install</h1></h2></h3></h4>
+
+<h1>Start development server
+npm start
+</code></pre></h1></h2></h3></h4>
+
+<strong>Redis:</strong></h1></h2></h3></h4>
+
+<pre><code><h1>macOS
+brew install redis
+brew services start redis</h1></h2></h3></h4>
+
+<h1>Linux
+sudo apt-get install redis-server
+sudo systemctl start redis</h1></h2></h3></h4>
+
+<h1>Verify
+redis-cli ping  # Should return PONG
+</code></pre></h1></h2></h3></h4>
+
+<strong>Celery Worker:</strong></h1></h2></h3></h4>
+
+<pre><code>cd backend
+celery -A backend.tasks worker --loglevel=info
+</code></pre></h1></h2></h3></h4>
+
+<h3>Verify Installation</h1></h2></h3></h4>
+
+<pre><code><h1>Test backend
+curl http://localhost:8000/health</h1></h2></h3></h4>
+
+<h1>Expected response:
+<h1>{"status":"healthy","app":"Pain Management Support Group API","version":"1.0.0"}</h1></h2></h3></h4>
+
+<h1>Test database connection
+docker-compose exec backend python -c "from backend.models.base import engine; print(engine.connect())"</h1></h2></h3></h4>
+
+<h1>Test Redis
+docker-compose exec redis redis-cli ping
+</code></pre></h1></h2></h3></h4>
+
+<p>---</h1></h2></h3></h4></p>
+
+<h2>Database Architecture</h1></h2></h3></h4>
+
+<h3>Schema Overview</h1></h2></h3></h4>
+
+<p>The database consists of 12 main tables organized into logical groups:</h1></h2></h3></h4></p>
+
+<strong>User Management:</strong>
+<ul>
+<li><code>users</code></h1></h2></h3></h4></li>
+</ul>
+
+<strong>Curriculum:</strong>
+<ul>
+<li><code>weeks</code></li>
+<li><code>sessions</code></li>
+<li><code>session_content</code></h1></h2></h3></h4></li>
+</ul>
+
+<strong>Assessments:</strong>
+<ul>
+<li><code>assessments</code></li>
+<li><code>assessment_questions</code></li>
+<li><code>assessment_submissions</code></li>
+<li><code>assessment_answers</code></h1></h2></h3></h4></li>
+</ul>
+
+<strong>Pain Tracking:</strong>
+<ul>
+<li><code>pain_logs</code></h1></h2></h3></h4></li>
+</ul>
+
+<strong>Progress:</strong>
+<ul>
+<li><code>progress_tracking</code></h1></h2></h3></h4></li>
+</ul>
+
+<strong>Social:</strong>
+<ul>
+<li><code>discussion_posts</code></li>
+<li><code>discussion_replies</code></h1></h2></h3></h4></li>
+</ul>
+
+<strong>Resources:</strong>
+<ul>
+<li><code>resources</code></h1></h2></h3></h4></li>
+</ul>
+
+<strong>AI/RAG:</strong>
+<ul>
+<li><code>rag_conversations</code></li>
+<li><code>rag_messages</code></h1></h2></h3></h4></li>
+</ul>
+
+<h3>Entity Relationship Diagram</h1></h2></h3></h4>
+
+<pre><code>users
+  │
+  ├─── pain_logs (1:N)
+  ├─── assessment_submissions (1:N)
+  │    └─── assessment_answers (1:N)
+  │         └─── assessment_questions (N:1)
+  ├─── progress_tracking (1:N)
+  │    └─── sessions (N:1)
+  ├─── discussion_posts (1:N)
+  │    └─── discussion_replies (1:N)
+  └─── rag_conversations (1:N)
+       └─── rag_messages (1:N)</h1></h2></h3></h4>
+
+<p>weeks
+  ├─── sessions (1:N)
+  │    └─── session_content (1:N)
+  └─── assessments (1:N)
+       └─── assessment_questions (1:N)
+</code></pre></h1></h2></h3></h4></p>
+
+<h3>Key Tables</h1></h2></h3></h4>
+
+<h4>users</h1></h2></h3></h4>
+
+<pre><code>CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    username VARCHAR(100) UNIQUE NOT NULL,
+    hashed_password VARCHAR(255) NOT NULL,
+    first_name VARCHAR(100) NOT NULL,
+    last_name VARCHAR(100) NOT NULL,
+    date_of_birth DATE,
+    phone VARCHAR(20),
+    role VARCHAR(20) NOT NULL DEFAULT 'patient',
+    is_active BOOLEAN NOT NULL DEFAULT TRUE,
+    is_verified BOOLEAN NOT NULL DEFAULT FALSE,
+    primary_pain_condition VARCHAR(200),
+    pain_conditions TEXT,
+    current_medications TEXT,
+    enrollment_date TIMESTAMP WITH TIME ZONE,
+    program_start_date TIMESTAMP WITH TIME ZONE,
+    current_week INTEGER DEFAULT 1,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+    updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+    last_login TIMESTAMP WITH TIME ZONE
+);</h1></h2></h3></h4>
+
+<p>CREATE INDEX idx_users_email ON users(email);
+CREATE INDEX idx_users_username ON users(username);
+</code></pre></h1></h2></h3></h4></p>
+
+<h4>pain_logs</h1></h2></h3></h4>
+
+<pre><code>CREATE TABLE pain_logs (
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER NOT NULL REFERENCES users(id),
+    pain_level INTEGER NOT NULL CHECK (pain_level >= 0 AND pain_level <= 10),
+    pain_locations TEXT NOT NULL,
+    pain_quality TEXT,
+    activity_before_pain TEXT,
+    medications_taken TEXT,
+    non_med_strategies TEXT,
+    sleep_quality INTEGER CHECK (sleep_quality >= 0 AND sleep_quality <= 10),
+    fatigue_level INTEGER CHECK (fatigue_level >= 0 AND fatigue_level <= 10),
+    anxiety_level INTEGER CHECK (anxiety_level >= 0 AND anxiety_level <= 10),
+    function_level INTEGER CHECK (function_level >= 0 AND function_level <= 10),
+    notes TEXT,
+    log_date TIMESTAMP WITH TIME ZONE NOT NULL,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+    updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);</h1></h2></h3></h4>
+
+<p>CREATE INDEX idx_pain_logs_user_id ON pain_logs(user_id);
+CREATE INDEX idx_pain_logs_log_date ON pain_logs(log_date);
+</code></pre></h1></h2></h3></h4></p>
+
+<h3>Migrations</h1></h2></h3></h4>
+
+<p>We use Alembic for database migrations.</h1></h2></h3></h4></p>
+
+<strong>Create Migration:</strong></h1></h2></h3></h4>
+
+<pre><code>cd backend
+alembic revision --autogenerate -m "Description of changes"
+</code></pre></h1></h2></h3></h4>
+
+<strong>Apply Migrations:</strong></h1></h2></h3></h4>
+
+<pre><code><h1>Upgrade to latest
+alembic upgrade head</h1></h2></h3></h4>
+
+<h1>Upgrade to specific revision
+alembic upgrade <revision_id></h1></h2></h3></h4>
+
+<h1>Downgrade one revision
+alembic downgrade -1</h1></h2></h3></h4>
+
+<h1>View history
+alembic history</h1></h2></h3></h4>
+
+<h1>Current revision
+alembic current
+</code></pre></h1></h2></h3></h4>
+
+<strong>Example Migration:</strong></h1></h2></h3></h4>
+
+<pre><code><h1>migrations/versions/001_initial.py
+from alembic import op
+import sqlalchemy as sa</h1></h2></h3></h4>
+
+<p>def upgrade():
+    op.create_table(
+        'users',
+        sa.Column('id', sa.Integer(), nullable=False),
+        sa.Column('email', sa.String(255), nullable=False),
+        sa.Column('username', sa.String(100), nullable=False),
+        # ... more columns
+        sa.PrimaryKeyConstraint('id'),
+        sa.UniqueConstraint('email'),
+        sa.UniqueConstraint('username')
+    )</h1></h2></h3></h4></p>
+
+<p>def downgrade():
+    op.drop_table('users')
+</code></pre></h1></h2></h3></h4></p>
+
+<h3>Database Backup</h1></h2></h3></h4>
+
+<strong>Manual Backup:</strong></h1></h2></h3></h4>
+
+<pre><code><h1>Backup
+pg_dump -U postgres pain_management > backup.sql</h1></h2></h3></h4>
+
+<h1>With Docker
+docker-compose exec postgres pg_dump -U postgres pain_management > backup.sql</h1></h2></h3></h4>
+
+<h1>Restore
+psql -U postgres pain_management < backup.sql
+</code></pre></h1></h2></h3></h4>
+
+<strong>Automated Backup (add to cron):</strong></h1></h2></h3></h4>
+
+<pre><code>#!/bin/bash
+<h1>backup.sh
+DATE=$(date +%Y%m%d_%H%M%S)
+BACKUP_DIR="/backups"
+docker-compose exec -T postgres pg_dump -U postgres pain_management | gzip > $BACKUP_DIR/backup_$DATE.sql.gz</h1></h2></h3></h4>
+
+<h1>Keep only last 30 days
+find $BACKUP_DIR -name "backup_*.sql.gz" -mtime +30 -delete
+</code></pre></h1></h2></h3></h4>
+
+<p>---</h1></h2></h3></h4></p>
+
+<h2>Backend API Documentation</h1></h2></h3></h4>
+
+<h3>Project Structure</h1></h2></h3></h4>
+
+<pre><code>backend/
+├── api/
+│   ├── __init__.py
+│   ├── routes/
+│   │   ├── __init__.py
+│   │   ├── auth.py          # Authentication endpoints
+│   │   ├── users.py         # User management
+│   │   ├── curriculum.py    # Curriculum access
+│   │   ├── assessments.py   # Tests and quizzes
+│   │   ├── pain_tracking.py # Pain logs
+│   │   ├── progress.py      # Progress tracking
+│   │   ├── discussions.py   # Forums
+│   │   ├── resources.py     # Educational materials
+│   │   └── rag.py          # AI Q&A
+│   └── middleware/
+│       └── auth.py          # Auth middleware
+├── models/
+│   ├── __init__.py
+│   ├── base.py             # Base model and DB session
+│   ├── user.py
+│   ├── curriculum.py
+│   ├── assessment.py
+│   ├── pain_log.py
+│   ├── progress.py
+│   ├── discussion.py
+│   ├── resource.py
+│   └── rag.py
+├── controllers/
+│   └── ...                 # Business logic (optional layer)
+├── services/
+│   ├── rag_service.py      # RAG implementation
+│   ├── email_service.py    # Email notifications
+│   └── assessment_service.py
+├── utils/
+│   ├── security.py         # Password hashing, tokens
+│   └── helpers.py
+├── config/
+│   └── settings.py         # Configuration
+├── tasks/
+│   └── celery_tasks.py     # Background tasks
+├── main.py                 # FastAPI application
+└── requirements.txt
+</code></pre></h1></h2></h3></h4>
+
+<h3>Authentication System</h1></h2></h3></h4>
+
+<strong>Implementation:</strong> <code>backend/api/routes/auth.py</code></h1></h2></h3></h4>
+
+<h4>Password Hashing</h1></h2></h3></h4>
+
+<pre><code>from passlib.context import CryptContext</h1></h2></h3></h4>
+
+<p>pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")</h1></h2></h3></h4></p>
+
+<p>def get_password_hash(password: str) -> str:
+    return pwd_context.hash(password)</h1></h2></h3></h4></p>
+
+<p>def verify_password(plain_password: str, hashed_password: str) -> bool:
+    return pwd_context.verify(plain_password, hashed_password)
+</code></pre></h1></h2></h3></h4></p>
+
+<h4>JWT Tokens</h1></h2></h3></h4>
+
+<pre><code>from jose import jwt
+from datetime import datetime, timedelta</h1></h2></h3></h4>
+
+<p>def create_access_token(data: dict) -> str:
+    to_encode = data.copy()
+    expire = datetime.utcnow() + timedelta(minutes=30)
+    to_encode.update({"exp": expire})
+    return jwt.encode(to_encode, SECRET_KEY, algorithm="HS256")
+</code></pre></h1></h2></h3></h4></p>
+
+<h4>Protected Routes</h1></h2></h3></h4>
+
+<pre><code>from fastapi import Depends, HTTPException, status
+from fastapi.security import OAuth2PasswordBearer</h1></h2></h3></h4>
+
+<p>oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")</h1></h2></h3></h4></p>
+
+<p>def get_current_user(token: str = Depends(oauth2_scheme)) -> User:
+    try:
+        payload = jwt.decode(token, SECRET_KEY, algorithms=["HS256"])
+        username: str = payload.get("sub")
+        if username is None:
+            raise HTTPException(status_code=401, detail="Invalid token")
+    except JWTError:
+        raise HTTPException(status_code=401, detail="Invalid token")</h1></h2></h3></h4></p>
+
+<p>    user = db.query(User).filter(User.username == username).first()
+    if user is None:
+        raise HTTPException(status_code=401, detail="User not found")
+    return user</h1></h2></h3></h4></p>
+
+<p>@router.get("/protected")
+def protected_route(current_user: User = Depends(get_current_user)):
+    return {"message": f"Hello {current_user.username}"}
+</code></pre></h1></h2></h3></h4></p>
+
+<h3>Creating New Endpoints</h1></h2></h3></h4>
+
+<strong>Step 1: Define Pydantic Schemas</strong></h1></h2></h3></h4>
+
+<pre><code><h1>api/schemas/pain_log.py
+from pydantic import BaseModel, Field
+from datetime import datetime</h1></h2></h3></h4>
+
+<p>class PainLogCreate(BaseModel):
+    pain_level: int = Field(..., ge=0, le=10)
+    pain_locations: str
+    sleep_quality: int | None = Field(None, ge=0, le=10)
+    notes: str | None = None</h1></h2></h3></h4></p>
+
+<p>class PainLogResponse(BaseModel):
+    id: int
+    user_id: int
+    pain_level: int
+    log_date: datetime</h1></h2></h3></h4></p>
+
+<p>    class Config:
+        from_attributes = True
+</code></pre></h1></h2></h3></h4></p>
+
+<strong>Step 2: Create Route Handler</strong></h1></h2></h3></h4>
+
+<pre><code><h1>api/routes/pain_tracking.py
+from fastapi import APIRouter, Depends, HTTPException
+from sqlalchemy.orm import Session
+from typing import List</h1></h2></h3></h4>
+
+<p>router = APIRouter()</h1></h2></h3></h4></p>
+
+<p>@router.post("/log", response_model=PainLogResponse)
+def create_pain_log(
+    pain_log: PainLogCreate,
+    current_user: User = Depends(get_current_user),
+    db: Session = Depends(get_db)
+):
+    """Create a new pain log entry"""
+    new_log = PainLog(
+        user_id=current_user.id,
+        log_date=datetime.utcnow(),
+        **pain_log.dict()
+    )
+    db.add(new_log)
+    db.commit()
+    db.refresh(new_log)
+    return new_log</h1></h2></h3></h4></p>
+
+<p>@router.get("/history", response_model=List[PainLogResponse])
+def get_pain_history(
+    limit: int = 30,
+    current_user: User = Depends(get_current_user),
+    db: Session = Depends(get_db)
+):
+    """Get user's pain log history"""
+    logs = db.query(PainLog).filter(
+        PainLog.user_id == current_user.id
+    ).order_by(PainLog.log_date.desc()).limit(limit).all()
+    return logs
+</code></pre></h1></h2></h3></h4></p>
+
+<strong>Step 3: Register Router</strong></h1></h2></h3></h4>
+
+<pre><code><h1>main.py
+from api.routes import pain_tracking</h1></h2></h3></h4>
+
+<p>app.include_router(
+    pain_tracking.router,
+    prefix="/api/v1/pain",
+    tags=["Pain Tracking"]
+)
+</code></pre></h1></h2></h3></h4></p>
+
+<h3>Error Handling</h1></h2></h3></h4>
+
+<strong>Custom Exception Classes:</strong></h1></h2></h3></h4>
+
+<pre><code><h1>utils/exceptions.py
+from fastapi import HTTPException, status</h1></h2></h3></h4>
+
+<p>class NotFoundException(HTTPException):
+    def __init__(self, detail: str = "Resource not found"):
+        super().__init__(status_code=status.HTTP_404_NOT_FOUND, detail=detail)</h1></h2></h3></h4></p>
+
+<p>class UnauthorizedException(HTTPException):
+    def __init__(self, detail: str = "Unauthorized"):
+        super().__init__(status_code=status.HTTP_401_UNAUTHORIZED, detail=detail)
+</code></pre></h1></h2></h3></h4></p>
+
+<strong>Global Exception Handler:</strong></h1></h2></h3></h4>
+
+<pre><code><h1>main.py
+from fastapi import Request
+from fastapi.responses import JSONResponse</h1></h2></h3></h4>
+
+<p>@app.exception_handler(Exception)
+async def global_exception_handler(request: Request, exc: Exception):
+    logger.error(f"Unexpected error: {str(exc)}")
+    return JSONResponse(
+        status_code=500,
+        content={"detail": "Internal server error"}
+    )
+</code></pre></h1></h2></h3></h4></p>
+
+<h3>Request Validation</h1></h2></h3></h4>
+
+<p>FastAPI uses Pydantic for automatic validation:</h1></h2></h3></h4></p>
+
+<pre><code>from pydantic import BaseModel, validator, Field
+from typing import List</h1></h2></h3></h4>
+
+<p>class PainLogCreate(BaseModel):
+    pain_level: int = Field(..., ge=0, le=10, description="Pain level 0-10")
+    pain_locations: List[str]</h1></h2></h3></h4></p>
+
+<p>    @validator('pain_locations')
+    def validate_locations(cls, v):
+        valid_locations = ['lower_back', 'neck', 'shoulder', 'hip', 'knee']
+        if not all(loc in valid_locations for loc in v):
+            raise ValueError('Invalid pain location')
+        return v
+</code></pre></h1></h2></h3></h4></p>
+
+<h3>Database Transactions</h1></h2></h3></h4>
+
+<pre><code>from sqlalchemy.orm import Session
+from contextlib import contextmanager</h1></h2></h3></h4>
+
+<p>@contextmanager
+def transaction(db: Session):
+    """Context manager for database transactions"""
+    try:
+        yield db
+        db.commit()
+    except Exception as e:
+        db.rollback()
+        raise e
+    finally:
+        db.close()</h1></h2></h3></h4></p>
+
+<h1>Usage
+with transaction(db) as session:
+    user = User(email="test@example.com", username="testuser")
+    session.add(user)
+    pain_log = PainLog(user_id=user.id, pain_level=5)
+    session.add(pain_log)
+</code></pre></h1></h2></h3></h4>
+
+<h3>Pagination</h1></h2></h3></h4>
+
+<pre><code>from typing import Generic, TypeVar, List
+from pydantic import BaseModel</h1></h2></h3></h4>
+
+<p>T = TypeVar('T')</h1></h2></h3></h4></p>
+
+<p>class PaginatedResponse(BaseModel, Generic[T]):
+    items: List[T]
+    total: int
+    page: int
+    page_size: int
+    total_pages: int</h1></h2></h3></h4></p>
+
+<p>def paginate(query, page: int = 1, page_size: int = 20):
+    """Paginate SQLAlchemy query"""
+    total = query.count()
+    items = query.offset((page - 1) * page_size).limit(page_size).all()</h1></h2></h3></h4></p>
+
+<p>    return PaginatedResponse(
+        items=items,
+        total=total,
+        page=page,
+        page_size=page_size,
+        total_pages=(total + page_size - 1) // page_size
+    )</h1></h2></h3></h4></p>
+
+<h1>Usage
+@router.get("/pain-logs")
+def get_pain_logs(page: int = 1, page_size: int = 20, db: Session = Depends(get_db)):
+    query = db.query(PainLog)
+    return paginate(query, page, page_size)
+</code></pre></h1></h2></h3></h4>
+
+<p>---</h1></h2></h3></h4></p>
+
+<h2>RAG System Implementation</h1></h2></h3></h4>
+
+<h3>Architecture</h1></h2></h3></h4>
+
+<p>The RAG (Retrieval-Augmented Generation) system enables AI-powered Q&A by:
+<ol>
+<li>Embedding medical literature into a vector database</li>
+<li>Retrieving relevant context based on user queries</li>
+<li>Generating informed answers with citations</h1></h2></h3></h4></li>
+</ul></p>
+
+<h3>Implementation: <code>backend/services/rag_service.py</code></h1></h2></h3></h4>
+
+<h4>Key Components</h1></h2></h3></h4>
+
+<strong>1. Document Ingestion</strong></h1></h2></h3></h4>
+
+<pre><code>from langchain.document_loaders import PyPDFLoader
+from langchain.text_splitter import RecursiveCharacterTextSplitter</h1></h2></h3></h4>
+
+<p>async def ingest_document(self, file_content: bytes, filename: str):
+    """Ingest a document into the vector store"""</h1></h2></h3></h4></p>
+
+<p>    # Save temporary file
+    temp_path = f"/tmp/{filename}"
+    with open(temp_path, "wb") as f:
+        f.write(file_content)</h1></h2></h3></h4></p>
+
+<p>    # Load document
+    loader = PyPDFLoader(temp_path)
+    documents = loader.load()</h1></h2></h3></h4></p>
+
+<p>    # Split into chunks
+    text_splitter = RecursiveCharacterTextSplitter(
+        chunk_size=512,
+        chunk_overlap=50,
+        separators=["\n\n", "\n", ". ", " ", ""]
+    )
+    chunks = text_splitter.split_documents(documents)</h1></h2></h3></h4></p>
+
+<p>    # Add metadata
+    for i, chunk in enumerate(chunks):
+        chunk.metadata.update({
+            "source": filename,
+            "chunk_index": i,
+            "document_id": hashlib.md5(file_content).hexdigest()
+        })</h1></h2></h3></h4></p>
+
+<p>    # Add to vector store
+    self.vector_store.add_documents(chunks)</h1></h2></h3></h4></p>
+
+<p>    os.remove(temp_path)
+    return {"chunks_created": len(chunks)}
+</code></pre></h1></h2></h3></h4></p>
+
+<strong>2. Query Processing</strong></h1></h2></h3></h4>
+
+<pre><code>from langchain.chains import ConversationalRetrievalChain
+from langchain.memory import ConversationBufferMemory</h1></h2></h3></h4>
+
+<p>async def query(self, query: str, conversation_history: List[Dict] = None):
+    """Query the knowledge base"""</h1></h2></h3></h4></p>
+
+<p>    # Create retriever
+    retriever = self.vector_store.as_retriever(
+        search_kwargs={"k": settings.TOP_K_RESULTS}
+    )</h1></h2></h3></h4></p>
+
+<p>    # Create memory
+    memory = ConversationBufferMemory(
+        memory_key="chat_history",
+        return_messages=True,
+        output_key="answer"
+    )</h1></h2></h3></h4></p>
+
+<p>    # Add conversation history
+    if conversation_history:
+        for msg in conversation_history:
+            if msg["role"] == "user":
+                memory.chat_memory.add_user_message(msg["content"])
+            else:
+                memory.chat_memory.add_ai_message(msg["content"])</h1></h2></h3></h4></p>
+
+<p>    # Create chain
+    qa_chain = ConversationalRetrievalChain.from_llm(
+        llm=self.llm,
+        retriever=retriever,
+        memory=memory,
+        return_source_documents=True
+    )</h1></h2></h3></h4></p>
+
+<p>    # Get response
+    result = qa_chain({"question": query})</h1></h2></h3></h4></p>
+
+<p>    # Extract sources
+    sources = [
+        {
+            "content": doc.page_content[:200],
+            "source": doc.metadata.get("source"),
+            "chunk_index": doc.metadata.get("chunk_index")
+        }
+        for doc in result.get("source_documents", [])
+    ]</h1></h2></h3></h4></p>
+
+<p>    return {
+        "response": result["answer"],
+        "sources": sources
+    }
+</code></pre></h1></h2></h3></h4></p>
+
+<strong>3. Custom Prompts</strong></h1></h2></h3></h4>
+
+<pre><code>from langchain.prompts import PromptTemplate</h1></h2></h3></h4>
+
+<p>PAIN_MANAGEMENT_PROMPT = PromptTemplate(
+    input_variables=["context", "question"],
+    template="""You are an expert pain management educator for a chronic pain support group.</h1></h2></h3></h4></p>
+
+<p>Your role is to provide accurate, evidence-based information about:
+<ul>
+<li>Pain physiology and anatomy</li>
+<li>Medication mechanisms and safety</li>
+<li>Alternative pain management techniques</li>
+<li>Nutrition and lifestyle factors</li>
+<li>Self-advocacy and patient rights</h1></h2></h3></h4></li>
+</ul></p>
+
+<p>Use the following context to answer the question. If the answer is not in the context,
+say so and provide general guidance while recommending they discuss with their healthcare provider.</h1></h2></h3></h4></p>
+
+<p>Always:
+<ol>
+<li>Cite sources when using information from the context</li>
+<li>Use accessible language (12th-grade reading level)</li>
+<li>Show empathy for people living with chronic pain</li>
+<li>Distinguish between educational information and medical advice</li>
+<li>Encourage self-advocacy and shared decision-making</h1></h2></h3></h4></li>
+</ul></p>
+
+<p>Context:
+{context}</h1></h2></h3></h4></p>
+
+<p>Question: {question}</h1></h2></h3></h4></p>
+
+<p>Answer:"""
+)
+</code></pre></h1></h2></h3></h4></p>
+
+<h3>Vector Database Setup</h1></h2></h3></h4>
+
+<strong>Option 1: Pinecone (Cloud)</strong></h1></h2></h3></h4>
+
+<pre><code>import pinecone
+from langchain.vectorstores import Pinecone as LangchainPinecone</h1></h2></h3></h4>
+
+<h1>Initialize
+pinecone.init(
+    api_key=settings.PINECONE_API_KEY,
+    environment=settings.PINECONE_ENVIRONMENT
+)</h1></h2></h3></h4>
+
+<h1>Create index
+if settings.PINECONE_INDEX_NAME not in pinecone.list_indexes():
+    pinecone.create_index(
+        name=settings.PINECONE_INDEX_NAME,
+        dimension=3072,  # text-embedding-3-large
+        metric="cosine"
+    )</h1></h2></h3></h4>
+
+<h1>Create vector store
+vector_store = LangchainPinecone.from_existing_index(
+    index_name=settings.PINECONE_INDEX_NAME,
+    embedding=embeddings
+)
+</code></pre></h1></h2></h3></h4>
+
+<strong>Option 2: ChromaDB (Local)</strong></h1></h2></h3></h4>
+
+<pre><code>import chromadb
+from langchain.vectorstores import Chroma</h1></h2></h3></h4>
+
+<h1>Initialize client
+client = chromadb.PersistentClient(path=settings.CHROMA_DB_PATH)</h1></h2></h3></h4>
+
+<h1>Create vector store
+vector_store = Chroma(
+    client=client,
+    collection_name="pain_management_docs",
+    embedding_function=embeddings
+)
+</code></pre></h1></h2></h3></h4>
+
+<h3>Embedding Generation</h1></h2></h3></h4>
+
+<pre><code>from langchain.embeddings import OpenAIEmbeddings</h1></h2></h3></h4>
+
+<p>embeddings = OpenAIEmbeddings(
+    openai_api_key=settings.OPENAI_API_KEY,
+    model=settings.OPENAI_EMBEDDING_MODEL  # text-embedding-3-large
+)</h1></h2></h3></h4></p>
+
+<h1>Generate embedding
+text = "How do NSAIDs reduce inflammation?"
+embedding = embeddings.embed_query(text)
+<h1>Returns: List[float] with 3072 dimensions
+</code></pre></h1></h2></h3></h4>
+
+<h3>Testing RAG System</h1></h2></h3></h4>
+
+<pre><code><h1>Test document ingestion
+with open("test_document.pdf", "rb") as f:
+    content = f.read()</h1></h2></h3></h4>
+
+<p>result = await rag_service.ingest_document(content, "test_document.pdf")
+print(f"Created {result['chunks_created']} chunks")</h1></h2></h3></h4></p>
+
+<h1>Test query
+response = await rag_service.query(
+    query="What are the side effects of NSAIDs?",
+    conversation_history=[]
+)</h1></h2></h3></h4>
+
+<p>print(f"Answer: {response['response']}")
+print(f"Sources: {response['sources']}")
+</code></pre></h1></h2></h3></h4></p>
+
+<h3>Monitoring RAG Performance</h1></h2></h3></h4>
+
+<pre><code><h1>Track query metrics
+import time</h1></h2></h3></h4>
+
+<p>start_time = time.time()
+response = await rag_service.query(query)
+response_time = (time.time() - start_time) * 1000</h1></h2></h3></h4></p>
+
+<h1>Log metrics
+logger.info(f"RAG Query: {query[:50]}... | Response time: {response_time}ms | Sources: {len(response['sources'])}")</h1></h2></h3></h4>
+
+<h1>Store in database for analysis
+metric = RAGMetric(
+    query=query,
+    response_time_ms=response_time,
+    chunks_retrieved=len(response['sources']),
+    model_used=settings.OPENAI_MODEL
+)
+db.add(metric)
+db.commit()
+</code></pre></h1></h2></h3></h4>
+
+<p>---</h1></h2></h3></h4></p>
+
+<h2>Assessment and Analytics</h1></h2></h3></h4>
+
+<h3>Python Assessment System</h1></h2></h3></h4>
+
+<strong>Location:</strong> <code>assessments/python/assessment_generator.py</code></h1></h2></h3></h4>
+
+<h4>Creating Assessments</h1></h2></h3></h4>
+
+<pre><code>from assessments.python.assessment_generator import AssessmentGenerator</h1></h2></h3></h4>
+
+<h1>Initialize generator
+generator = AssessmentGenerator()</h1></h2></h3></h4>
+
+<h1>Generate Week 1 pre-test
+pretest = generator.generate_assessment(
+    week_number=1,
+    assessment_type="pre_test",
+    num_questions=15
+)</h1></h2></h3></h4>
+
+<h1>Export to JSON
+generator.export_to_json(pretest, "week1_pretest.json")</h1></h2></h3></h4>
+
+<h1>Score assessment
+user_answers = {
+    "w1_q1": "B",
+    "w1_q2": "A",
+    # ... more answers
+}</h1></h2></h3></h4>
+
+<p>results = generator.score_assessment(pretest, user_answers)
+print(f"Score: {results['percentage']}%")
+print(f"Passed: {results['passed']}")
+</code></pre></h1></h2></h3></h4></p>
+
+<h4>Adding New Questions</h1></h2></h3></h4>
+
+<pre><code>from assessments.python.assessment_generator import Question, QuestionType, QuestionDifficulty</h1></h2></h3></h4>
+
+<h1>Add to question bank
+new_question = Question(
+    id="w2_q5",
+    text="What is the maximum daily dose of acetaminophen for adults?",
+    type=QuestionType.MULTIPLE_CHOICE,
+    options=[
+        "A. 1000mg",
+        "B. 2000mg",
+        "C. 3000-4000mg",
+        "D. 6000mg"
+    ],
+    correct_answer="C",
+    explanation="The maximum recommended daily dose is 3000-4000mg to avoid liver toxicity.",
+    topic="Medication Safety",
+    difficulty=QuestionDifficulty.EASY,
+    points=1
+)</h1></h2></h3></h4>
+
+<h1>Add to question bank
+generator.question_bank[2].append(new_question)
+</code></pre></h1></h2></h3></h4>
+
+<h3>Python Analytics System</h1></h2></h3></h4>
+
+<strong>Location:</strong> <code>assessments/python/outcome_analytics.py</code></h1></h2></h3></h4>
+
+<h4>Generating Patient Reports</h1></h2></h3></h4>
+
+<pre><code>from assessments.python.outcome_analytics import OutcomeAnalytics</h1></h2></h3></h4>
+
+<p>analytics = OutcomeAnalytics()</h1></h2></h3></h4></p>
+
+<h1>Generate comprehensive report
+report = analytics.generate_patient_report(
+    user_id=user_id,
+    pain_logs=pain_logs_list,
+    assessment_scores={
+        1: {"pre_score": 60, "post_score": 85},
+        2: {"pre_score": 65, "post_score": 90},
+        # ... more weeks
+    },
+    program_completion=True
+)</h1></h2></h3></h4>
+
+<h1>Export
+analytics.export_report_to_json(report, f"patient_{user_id}_report.json")
+analytics.export_report_to_csv(report, f"patient_{user_id}_summary.csv")</h1></h2></h3></h4>
+
+<h1>Access results
+print(f"Pain reduction: {report['changes']['pain_level']['absolute_change']}")
+print(f"Clinically significant: {report['clinically_significant']['pain_level']}")
+</code></pre></h1></h2></h3></h4>
+
+<h3>R Statistical Analysis</h1></h2></h3></h4>
+
+<strong>Location:</strong> <code>assessments/r/statistical_analysis.R</code></h1></h2></h3></h4>
+
+<h4>Running Analysis</h1></h2></h3></h4>
+
+<pre><code>cd assessments/r</h1></h2></h3></h4>
+
+<h1>Run full analysis
+Rscript statistical_analysis.R --input ../data/patient_outcomes.csv</h1></h2></h3></h4>
+
+<h1>Or from R console
+source("statistical_analysis.R")
+results <- main("../data/patient_outcomes.csv")
+</code></pre></h1></h2></h3></h4>
+
+<h4>Key Functions</h1></h2></h3></h4>
+
+<strong>Paired T-Tests:</strong></h1></h2></h3></h4>
+
+<pre><code><h1>Perform paired t-tests
+ttests <- perform_paired_ttests(data)</h1></h2></h3></h4>
+
+<h1>Results include:
+<h1>- n_pairs: number of complete pairs
+<h1>- mean_baseline: average at baseline
+<h1>- mean_endpoint: average at week 8
+<h1>- t_statistic, p_value
+<h1>- cohens_d: effect size
+</code></pre></h1></h2></h3></h4>
+
+<strong>Longitudinal Models:</strong></h1></h2></h3></h4>
+
+<pre><code><h1>Fit mixed-effects models
+models <- fit_longitudinal_models(data)</h1></h2></h3></h4>
+
+<h1>Access results
+summary(models$models$pain_level)
+models$summaries$pain_level$slope  # Change per week
+</code></pre></h1></h2></h3></h4>
+
+<strong>Generate Report:</strong></h1></h2></h3></h4>
+
+<pre><code><h1>Generate HTML report with plots
+results <- generate_statistical_report(
+    data,
+    output_path = "reports/statistical_report.html"
+)
+</code></pre></h1></h2></h3></h4>
+
+<h3>Integrating Analytics with API</h1></h2></h3></h4>
+
+<pre><code><h1>api/routes/analytics.py
+from fastapi import APIRouter, Depends
+from assessments.python.outcome_analytics import OutcomeAnalytics</h1></h2></h3></h4>
+
+<p>router = APIRouter()</h1></h2></h3></h4></p>
+
+<p>@router.get("/patient/{user_id}/report")
+async def get_patient_report(
+    user_id: int,
+    db: Session = Depends(get_db),
+    current_user: User = Depends(get_current_user)
+):
+    """Generate patient outcome report"""</h1></h2></h3></h4></p>
+
+<p>    # Authorization check
+    if current_user.role not in ["admin", "instructor"] and current_user.id != user_id:
+        raise HTTPException(status_code=403, detail="Forbidden")</h1></h2></h3></h4></p>
+
+<p>    # Get data
+    pain_logs = db.query(PainLog).filter(PainLog.user_id == user_id).all()</h1></h2></h3></h4></p>
+
+<p>    # Generate report
+    analytics = OutcomeAnalytics()
+    report = analytics.generate_patient_report(
+        user_id=user_id,
+        pain_logs=[log.__dict__ for log in pain_logs],
+        assessment_scores={},  # Get from database
+        program_completion=True
+    )</h1></h2></h3></h4></p>
+
+<p>    return report
+</code></pre></h1></h2></h3></h4></p>
+
+<p>---</h1></h2></h3></h4></p>
+
+<h2>Frontend Development</h1></h2></h3></h4>
+
+<h3>Project Structure (React)</h1></h2></h3></h4>
+
+<pre><code>frontend/
+├── public/
+│   ├── index.html
+│   └── favicon.ico
+├── src/
+│   ├── components/
+│   │   ├── common/          # Reusable components
+│   │   ├── auth/            # Login, register
+│   │   ├── dashboard/       # Patient dashboard
+│   │   ├── curriculum/      # Week/session viewers
+│   │   ├── assessments/     # Test interfaces
+│   │   ├── pain-tracking/   # Pain log forms
+│   │   ├── chat/           # AI chatbot
+│   │   └── forums/         # Discussion forums
+│   ├── pages/
+│   │   ├── HomePage.tsx
+│   │   ├── DashboardPage.tsx
+│   │   ├── WeekPage.tsx
+│   │   └── ...
+│   ├── hooks/
+│   │   ├── useAuth.ts
+│   │   ├── usePainLogs.ts
+│   │   └── ...
+│   ├── context/
+│   │   ├── AuthContext.tsx
+│   │   └── ThemeContext.tsx
+│   ├── services/
+│   │   └── api.ts          # API client
+│   ├── types/
+│   │   └── index.ts        # TypeScript types
+│   ├── utils/
+│   │   └── helpers.ts
+│   ├── styles/
+│   │   └── globals.css
+│   ├── App.tsx
+│   └── index.tsx
+├── package.json
+└── tsconfig.json
+</code></pre></h1></h2></h3></h4>
+
+<h3>API Client Setup</h1></h2></h3></h4>
+
+<pre><code>// src/services/api.ts
+import axios from 'axios';</h1></h2></h3></h4>
+
+<p>const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:8000';</h1></h2></h3></h4></p>
+
+<p>export const api = axios.create({
+  baseURL: API_URL,
+  headers: {
+    'Content-Type': 'application/json',
+  },
+});</h1></h2></h3></h4></p>
+
+<p>// Add token to requests
+api.interceptors.request.use((config) => {
+  const token = localStorage.getItem('access_token');
+  if (token) {
+    config.headers.Authorization = <code>Bearer ${token}</code>;
+  }
+  return config;
+});</h1></h2></h3></h4></p>
+
+<p>// Handle token expiration
+api.interceptors.response.use(
+  (response) => response,
+  async (error) => {
+    if (error.response?.status === 401) {
+      localStorage.removeItem('access_token');
+      window.location.href = '/login';
+    }
+    return Promise.reject(error);
+  }
+);</h1></h2></h3></h4></p>
+
+<p>// API functions
+export const authAPI = {
+  login: (username: string, password: string) =>
+    api.post('/api/v1/auth/login', { username, password }),
+  register: (data: RegisterData) =>
+    api.post('/api/v1/auth/register', data),
+};</h1></h2></h3></h4></p>
+
+<p>export const painAPI = {
+  createLog: (data: PainLogData) =>
+    api.post('/api/v1/pain/log', data),
+  getHistory: (limit: number = 30) =>
+    api.get(<code>/api/v1/pain/history?limit=${limit}</code>),
+};
+</code></pre></h1></h2></h3></h4></p>
+
+<h3>Authentication Hook</h1></h2></h3></h4>
+
+<pre><code>// src/hooks/useAuth.ts
+import { createContext, useContext, useState, useEffect } from 'react';
+import { authAPI } from '../services/api';</h1></h2></h3></h4>
+
+<p>interface AuthContextType {
+  user: User | null;
+  login: (username: string, password: string) => Promise<void>;
+  logout: () => void;
+  isAuthenticated: boolean;
+}</h1></h2></h3></h4></p>
+
+<p>const AuthContext = createContext<AuthContextType | undefined>(undefined);</h1></h2></h3></h4></p>
+
+<p>export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const [user, setUser] = useState<User | null>(null);</h1></h2></h3></h4></p>
+
+<p>  useEffect(() => {
+    // Check for stored token
+    const token = localStorage.getItem('access_token');
+    if (token) {
+      // Fetch user info
+      fetchCurrentUser();
+    }
+  }, []);</h1></h2></h3></h4></p>
+
+<p>  const login = async (username: string, password: string) => {
+    const response = await authAPI.login(username, password);
+    localStorage.setItem('access_token', response.data.access_token);
+    await fetchCurrentUser();
+  };</h1></h2></h3></h4></p>
+
+<p>  const logout = () => {
+    localStorage.removeItem('access_token');
+    setUser(null);
+  };</h1></h2></h3></h4></p>
+
+<p>  const fetchCurrentUser = async () => {
+    try {
+      const response = await api.get('/api/v1/auth/me');
+      setUser(response.data);
+    } catch (error) {
+      logout();
+    }
+  };</h1></h2></h3></h4></p>
+
+<p>  return (
+    <AuthContext.Provider value={{ user, login, logout, isAuthenticated: !!user }}>
+      {children}
+    </AuthContext.Provider>
+  );
+};</h1></h2></h3></h4></p>
+
+<p>export const useAuth = () => {
+  const context = useContext(AuthContext);
+  if (!context) throw new Error('useAuth must be used within AuthProvider');
+  return context;
+};
+</code></pre></h1></h2></h3></h4></p>
+
+<h3>Component Example: Pain Log Form</h1></h2></h3></h4>
+
+<pre><code>// src/components/pain-tracking/PainLogForm.tsx
+import React, { useState } from 'react';
+import { painAPI } from '../../services/api';</h1></h2></h3></h4>
+
+<p>export const PainLogForm: React.FC = () => {
+  const [painLevel, setPainLevel] = useState(5);
+  const [locations, setLocations] = useState<string[]>([]);
+  const [notes, setNotes] = useState('');</h1></h2></h3></h4></p>
+
+<p>  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();</h1></h2></h3></h4></p>
+
+<p>    try {
+      await painAPI.createLog({
+        pain_level: painLevel,
+        pain_locations: JSON.stringify(locations),
+        notes,
+      });</h1></h2></h3></h4></p>
+
+<p>      alert('Pain log saved!');
+      // Reset form or redirect
+    } catch (error) {
+      console.error('Error saving pain log:', error);
+      alert('Failed to save pain log');
+    }
+  };</h1></h2></h3></h4></p>
+
+<p>  return (
+    <form onSubmit={handleSubmit} className="pain-log-form">
+      <div className="form-group">
+        <label>Pain Level (0-10)</label>
+        <input
+          type="range"
+          min="0"
+          max="10"
+          value={painLevel}
+          onChange={(e) => setPainLevel(Number(e.target.value))}
+        />
+        <span>{painLevel}</span>
+      </div></h1></h2></h3></h4></p>
+
+<p>      <div className="form-group">
+        <label>Pain Locations</label>
+        <select
+          multiple
+          value={locations}
+          onChange={(e) => {
+            const selected = Array.from(e.target.selectedOptions, option => option.value);
+            setLocations(selected);
+          }}
+        >
+          <option value="lower_back">Lower Back</option>
+          <option value="neck">Neck</option>
+          <option value="shoulder">Shoulder</option>
+          <option value="hip">Hip</option>
+          <option value="knee">Knee</option>
+        </select>
+      </div></h1></h2></h3></h4></p>
+
+<p>      <div className="form-group">
+        <label>Notes</label>
+        <textarea
+          value={notes}
+          onChange={(e) => setNotes(e.target.value)}
+          rows={4}
+        />
+      </div></h1></h2></h3></h4></p>
+
+<p>      <button type="submit">Save Pain Log</button>
+    </form>
+  );
+};
+</code></pre></h1></h2></h3></h4></p>
+
+<p>---</h1></h2></h3></h4></p>
+
+<h2>Deployment</h1></h2></h3></h4>
+
+<h3>Production Deployment Checklist</h1></h2></h3></h4>
+
+<strong>Pre-Deployment:</strong></h1></h2></h3></h4>
+
+<p>☐ Environment variables set correctly
+☐ Database migrations run
+☐ SSL certificate configured
+☐ Domain DNS configured
+☐ Backup strategy in place
+☐ Monitoring tools configured
+☐ Security audit completed
+☐ Load testing completed</h1></h2></h3></h4></p>
+
+<h3>Docker Production Build</h1></h2></h3></h4>
+
+<strong>Backend Dockerfile:</strong></h1></h2></h3></h4>
+
+<pre><code><h1>Multi-stage build for smaller image
+FROM python:3.11-slim as builder</h1></h2></h3></h4>
+
+<p>WORKDIR /app
+COPY requirements.txt .
+RUN pip install --user --no-cache-dir -r requirements.txt</h1></h2></h3></h4></p>
+
+<p>FROM python:3.11-slim</h1></h2></h3></h4></p>
+
+<p>WORKDIR /app
+COPY --from=builder /root/.local /root/.local
+COPY . .</h1></h2></h3></h4></p>
+
+<p>ENV PATH=/root/.local/bin:$PATH</h1></h2></h3></h4></p>
+
+<p>CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000", "--workers", "4"]
+</code></pre></h1></h2></h3></h4></p>
+
+<strong>Production docker-compose.yml:</strong></h1></h2></h3></h4>
+
+<pre><code>version: '3.8'</h1></h2></h3></h4>
+
+<p>services:
+  postgres:
+    image: postgres:15-alpine
+    volumes:
+<ul>
+<li>postgres_data:/var/lib/postgresql/data</li>
+</ul>
+    environment:
+      POSTGRES_PASSWORD_FILE: /run/secrets/postgres_password
+    secrets:
+<ul>
+<li>postgres_password</li>
+</ul>
+    restart: always</h1></h2></h3></h4></p>
+
+<p>  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile.prod
+    environment:
+      DATABASE_URL: postgresql://postgres@postgres:5432/pain_management
+    depends_on:
+<ul>
+<li>postgres</li>
+</ul>
+    restart: always</h1></h2></h3></h4></p>
+
+<p>  nginx:
+    image: nginx:alpine
+    volumes:
+<ul>
+<li>./nginx/nginx.conf:/etc/nginx/nginx.conf</li>
+<li>./ssl:/etc/nginx/ssl</li>
+</ul>
+    ports:
+<ul>
+<li>"80:80"</li>
+<li>"443:443"</li>
+</ul>
+    depends_on:
+<ul>
+<li>backend</li>
+</ul>
+    restart: always</h1></h2></h3></h4></p>
+
+<p>secrets:
+  postgres_password:
+    file: ./secrets/postgres_password.txt</h1></h2></h3></h4></p>
+
+<p>volumes:
+  postgres_data:
+</code></pre></h1></h2></h3></h4></p>
+
+<h3>Nginx Configuration</h1></h2></h3></h4>
+
+<pre><code><h1>nginx/nginx.conf
+upstream backend {
+    server backend:8000;
+}</h1></h2></h3></h4>
+
+<p>server {
+    listen 80;
+    server_name painmanagement.example.com;
+    return 301 https://$server_name$request_uri;
+}</h1></h2></h3></h4></p>
+
+<p>server {
+    listen 443 ssl http2;
+    server_name painmanagement.example.com;</h1></h2></h3></h4></p>
+
+<p>    ssl_certificate /etc/nginx/ssl/cert.pem;
+    ssl_certificate_key /etc/nginx/ssl/key.pem;
+    ssl_protocols TLSv1.2 TLSv1.3;
+    ssl_ciphers HIGH:!aNULL:!MD5;</h1></h2></h3></h4></p>
+
+<p>    client_max_body_size 10M;</h1></h2></h3></h4></p>
+
+<p>    location /api/ {
+        proxy_pass http://backend;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }</h1></h2></h3></h4></p>
+
+<p>    location / {
+        root /usr/share/nginx/html;
+        try_files $uri /index.html;
+    }
+}
+</code></pre></h1></h2></h3></h4></p>
+
+<h3>CI/CD with GitHub Actions</h1></h2></h3></h4>
+
+<pre><code><h1>.github/workflows/deploy.yml
+name: Deploy to Production</h1></h2></h3></h4>
+
+<p>on:
+  push:
+    branches: [main]</h1></h2></h3></h4></p>
+
+<p>jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+<ul>
+<li>uses: actions/checkout@v3</li>
+<li>uses: actions/setup-python@v4</li>
+</ul>
+        with:
+          python-version: '3.11'
+<ul>
+<li>run: pip install -r backend/requirements.txt</li>
+<li>run: pytest backend/tests</h1></h2></h3></h4></li>
+</ul></p>
+
+<p>  deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+<ul>
+<li>uses: actions/checkout@v3</li>
+<li>name: Deploy to server</li>
+</ul>
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            cd /app/pain-management
+            git pull
+            docker-compose -f docker-compose.prod.yml up -d --build
+            docker-compose exec backend alembic upgrade head
+</code></pre></h1></h2></h3></h4></p>
+
+<h3>Environment Variables (Production)</h1></h2></h3></h4>
+
+<pre><code><h1>Use secrets management (AWS Secrets Manager, Vault, etc.)
+<h1>Never commit .env to git</h1></h2></h3></h4>
+
+<h1>Generate secure keys
+openssl rand -base64 32</h1></h2></h3></h4>
+
+<h1>Example .env.prod
+SECRET_KEY=your-generated-secure-key
+DATABASE_URL=postgresql://user:pass@db-host:5432/pain_management
+OPENAI_API_KEY=sk-prod-key
+PINECONE_API_KEY=prod-key
+ENVIRONMENT=production
+DEBUG=false
+</code></pre></h1></h2></h3></h4>
+
+<p>---</h1></h2></h3></h4></p>
+
+<h2>Security and Compliance</h1></h2></h3></h4>
+
+<h3>HIPAA Compliance Considerations</h1></h2></h3></h4>
+
+<strong>Technical Safeguards:</strong></h1></h2></h3></h4>
+
+<ol>
+<li><strong>Access Control</strong></li>
+<li>Unique user authentication</li>
+<li>Role-based access control</li>
+<li>Automatic logout after inactivity</li>
+<li>Emergency access procedures</h1></h2></h3></h4></li>
+</ul>
+
+<ol>
+<li><strong>Audit Controls</strong></li>
+<li>Log all PHI access</li>
+<li>Tamper-proof logs</li>
+<li>Regular audit reviews</h1></h2></h3></h4></li>
+</ul>
+
+<ol>
+<li><strong>Integrity</strong></li>
+<li>Data checksums</li>
+<li>Digital signatures</li>
+<li>Version control</h1></h2></h3></h4></li>
+</ul>
+
+<ol>
+<li><strong>Transmission Security</strong></li>
+<li>TLS 1.3 for all connections</li>
+<li>VPN for admin access</li>
+<li>Encrypted backups</h1></h2></h3></h4></li>
+</ul>
+
+<strong>Implementation Example:</strong></h1></h2></h3></h4>
+
+<pre><code><h1>Audit logging middleware
+from fastapi import Request
+import logging</h1></h2></h3></h4>
+
+<p>audit_logger = logging.getLogger('audit')</h1></h2></h3></h4></p>
+
+<p>@app.middleware("http")
+async def audit_middleware(request: Request, call_next):
+    # Log PHI access
+    if '/api/v1/users/' in request.url.path or '/api/v1/pain/' in request.url.path:
+        user = await get_current_user_from_request(request)
+        audit_logger.info(
+            f"PHI_ACCESS | User: {user.id} | Endpoint: {request.url.path} | IP: {request.client.host}"
+        )</h1></h2></h3></h4></p>
+
+<p>    response = await call_next(request)
+    return response
+</code></pre></h1></h2></h3></h4></p>
+
+<h3>Data Encryption</h1></h2></h3></h4>
+
+<strong>At Rest:</strong></h1></h2></h3></h4>
+
+<pre><code>from cryptography.fernet import Fernet</h1></h2></h3></h4>
+
+<h1>Generate key (store securely)
+key = Fernet.generate_key()
+cipher = Fernet(key)</h1></h2></h3></h4>
+
+<h1>Encrypt sensitive data
+def encrypt_field(data: str) -> bytes:
+    return cipher.encrypt(data.encode())</h1></h2></h3></h4>
+
+<p>def decrypt_field(encrypted_data: bytes) -> str:
+    return cipher.decrypt(encrypted_data).decode()</h1></h2></h3></h4></p>
+
+<h1>In model
+class User(Base):
+    ssn_encrypted = Column(LargeBinary)  # Store encrypted</h1></h2></h3></h4>
+
+<p>    @property
+    def ssn(self):
+        return decrypt_field(self.ssn_encrypted) if self.ssn_encrypted else None</h1></h2></h3></h4></p>
+
+<p>    @ssn.setter
+    def ssn(self, value):
+        self.ssn_encrypted = encrypt_field(value) if value else None
+</code></pre></h1></h2></h3></h4></p>
+
+<strong>In Transit:</strong></h1></h2></h3></h4>
+
+<ul>
+<li>Always use HTTPS (TLS 1.2+)</li>
+<li>Certificate pinning for mobile apps</li>
+<li>Encrypted WebSocket connections</h1></h2></h3></h4></li>
+</ul>
+
+<h3>Input Validation and SQL Injection Prevention</h1></h2></h3></h4>
+
+<pre><code><h1>SAFE - Using ORM
+user = db.query(User).filter(User.email == email).first()</h1></h2></h3></h4>
+
+<h1>UNSAFE - Raw SQL with string formatting (DON'T DO THIS)
+<h1>result = db.execute(f"SELECT * FROM users WHERE email = '{email}'")</h1></h2></h3></h4>
+
+<h1>If raw SQL is necessary, use parameterized queries
+result = db.execute(
+    "SELECT * FROM users WHERE email = :email",
+    {"email": email}
+)
+</code></pre></h1></h2></h3></h4>
+
+<h3>XSS Prevention</h1></h2></h3></h4>
+
+<pre><code>from fastapi.responses import HTMLResponse
+from markupsafe import escape</h1></h2></h3></h4>
+
+<p>@app.get("/user/{user_id}")
+def get_user_profile(user_id: int):
+    user = get_user(user_id)</h1></h2></h3></h4></p>
+
+<p>    # Escape user input before displaying
+    safe_bio = escape(user.bio)</h1></h2></h3></h4></p>
+
+<p>    return HTMLResponse(f"<div>{safe_bio}</div>")
+</code></pre></h1></h2></h3></h4></p>
+
+<h3>Rate Limiting</h1></h2></h3></h4>
+
+<pre><code>from slowapi import Limiter
+from slowapi.util import get_remote_address</h1></h2></h3></h4>
+
+<p>limiter = Limiter(key_func=get_remote_address)
+app.state.limiter = limiter</h1></h2></h3></h4></p>
+
+<p>@app.get("/api/v1/pain/history")
+@limiter.limit("10/minute")
+def get_pain_history(request: Request):
+    # Endpoint limited to 10 requests per minute per IP
+    pass
+</code></pre></h1></h2></h3></h4></p>
+
+<h3>Password Requirements</h1></h2></h3></h4>
+
+<pre><code>import re</h1></h2></h3></h4>
+
+<p>def validate_password(password: str) -> bool:
+    """
+    Password must:
+<ul>
+<li>Be at least 12 characters</li>
+<li>Contain uppercase and lowercase</li>
+<li>Contain a number</li>
+<li>Contain a special character</li>
+</ul>
+    """
+    if len(password) < 12:
+        return False
+    if not re.search(r'[A-Z]', password):
+        return False
+    if not re.search(r'[a-z]', password):
+        return False
+    if not re.search(r'\d', password):
+        return False
+    if not re.search(r'[!@#$%^&*(),.?":{}|<>]', password):
+        return False
+    return True
+</code></pre></h1></h2></h3></h4></p>
+
+<p>---</h1></h2></h3></h4></p>
+
+<h2>Testing</h1></h2></h3></h4>
+
+<h3>Backend Testing</h1></h2></h3></h4>
+
+<strong>Test Structure:</strong></h1></h2></h3></h4>
+
+<pre><code>backend/tests/
+├── __init__.py
+├── conftest.py          # Pytest fixtures
+├── test_auth.py
+├── test_users.py
+├── test_pain_logs.py
+├── test_assessments.py
+└── test_rag.py
+</code></pre></h1></h2></h3></h4>
+
+<strong>Fixtures (conftest.py):</strong></h1></h2></h3></h4>
+
+<pre><code>import pytest
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
+from backend.models.base import Base
+from backend.main import app
+from fastapi.testclient import TestClient</h1></h2></h3></h4>
+
+<h1>Test database
+TEST_DATABASE_URL = "sqlite:///./test.db"</h1></h2></h3></h4>
+
+<p>@pytest.fixture(scope="function")
+def db_session():
+    """Create test database session"""
+    engine = create_engine(TEST_DATABASE_URL)
+    Base.metadata.create_all(engine)
+    Session = sessionmaker(bind=engine)
+    session = Session()</h1></h2></h3></h4></p>
+
+<p>    yield session</h1></h2></h3></h4></p>
+
+<p>    session.close()
+    Base.metadata.drop_all(engine)</h1></h2></h3></h4></p>
+
+<p>@pytest.fixture
+def client(db_session):
+    """Create test client"""
+    def override_get_db():
+        yield db_session</h1></h2></h3></h4></p>
+
+<p>    app.dependency_overrides[get_db] = override_get_db
+    return TestClient(app)</h1></h2></h3></h4></p>
+
+<p>@pytest.fixture
+def auth_token(client):
+    """Create authenticated user and return token"""
+    # Register user
+    client.post("/api/v1/auth/register", json={
+        "email": "test@example.com",
+        "username": "testuser",
+        "password": "SecurePassword123!",
+        "first_name": "Test",
+        "last_name": "User"
+    })</h1></h2></h3></h4></p>
+
+<p>    # Login
+    response = client.post("/api/v1/auth/login", data={
+        "username": "testuser",
+        "password": "SecurePassword123!"
+    })</h1></h2></h3></h4></p>
+
+<p>    return response.json()["access_token"]
+</code></pre></h1></h2></h3></h4></p>
+
+<strong>Example Tests:</strong></h1></h2></h3></h4>
+
+<pre><code><h1>tests/test_pain_logs.py
+def test_create_pain_log(client, auth_token):
+    """Test creating a pain log"""
+    response = client.post(
+        "/api/v1/pain/log",
+        json={
+            "pain_level": 5,
+            "pain_locations": '["lower_back"]',
+            "notes": "Test pain log"
+        },
+        headers={"Authorization": f"Bearer {auth_token}"}
+    )</h1></h2></h3></h4>
+
+<p>    assert response.status_code == 200
+    data = response.json()
+    assert data["pain_level"] == 5
+    assert "lower_back" in data["pain_locations"]</h1></h2></h3></h4></p>
+
+<p>def test_get_pain_history(client, auth_token):
+    """Test retrieving pain history"""
+    # Create some logs first
+    for i in range(5):
+        client.post(
+            "/api/v1/pain/log",
+            json={"pain_level": i + 1, "pain_locations": '["knee"]'},
+            headers={"Authorization": f"Bearer {auth_token}"}
+        )</h1></h2></h3></h4></p>
+
+<p>    # Get history
+    response = client.get(
+        "/api/v1/pain/history?limit=10",
+        headers={"Authorization": f"Bearer {auth_token}"}
+    )</h1></h2></h3></h4></p>
+
+<p>    assert response.status_code == 200
+    data = response.json()
+    assert len(data) == 5</h1></h2></h3></h4></p>
+
+<p>def test_unauthorized_access(client):
+    """Test that endpoints require authentication"""
+    response = client.get("/api/v1/pain/history")
+    assert response.status_code == 401
+</code></pre></h1></h2></h3></h4></p>
+
+<strong>Running Tests:</strong></h1></h2></h3></h4>
+
+<pre><code>cd backend</h1></h2></h3></h4>
+
+<h1>Run all tests
+pytest</h1></h2></h3></h4>
+
+<h1>Run with coverage
+pytest --cov=backend --cov-report=html</h1></h2></h3></h4>
+
+<h1>Run specific test file
+pytest tests/test_pain_logs.py</h1></h2></h3></h4>
+
+<h1>Run specific test
+pytest tests/test_pain_logs.py::test_create_pain_log</h1></h2></h3></h4>
+
+<h1>Verbose output
+pytest -v</h1></h2></h3></h4>
+
+<h1>Stop on first failure
+pytest -x
+</code></pre></h1></h2></h3></h4>
+
+<h3>Frontend Testing</h1></h2></h3></h4>
+
+<pre><code>// src/components/__tests__/PainLogForm.test.tsx
+import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+import { PainLogForm } from '../pain-tracking/PainLogForm';
+import * as api from '../../services/api';</h1></h2></h3></h4>
+
+<p>jest.mock('../../services/api');</h1></h2></h3></h4></p>
+
+<p>describe('PainLogForm', () => {
+  it('renders pain level slider', () => {
+    render(<PainLogForm />);
+    const slider = screen.getByRole('slider');
+    expect(slider).toBeInTheDocument();
+  });</h1></h2></h3></h4></p>
+
+<p>  it('submits form with correct data', async () => {
+    const mockCreate = jest.spyOn(api.painAPI, 'createLog');
+    mockCreate.mockResolvedValue({ data: { id: 1 } });</h1></h2></h3></h4></p>
+
+<p>    render(<PainLogForm />);</h1></h2></h3></h4></p>
+
+<p>    const slider = screen.getByRole('slider');
+    fireEvent.change(slider, { target: { value: '7' } });</h1></h2></h3></h4></p>
+
+<p>    const submit = screen.getByText('Save Pain Log');
+    fireEvent.click(submit);</h1></h2></h3></h4></p>
+
+<p>    await waitFor(() => {
+      expect(mockCreate).toHaveBeenCalledWith(
+        expect.objectContaining({ pain_level: 7 })
+      );
+    });
+  });
+});
+</code></pre></h1></h2></h3></h4></p>
+
+<h3>Load Testing</h1></h2></h3></h4>
+
+<pre><code><h1>tests/load_test.py
+from locust import HttpUser, task, between</h1></h2></h3></h4>
+
+<p>class PainManagementUser(HttpUser):
+    wait_time = between(1, 3)</h1></h2></h3></h4></p>
+
+<p>    def on_start(self):
+        """Login before running tasks"""
+        response = self.client.post("/api/v1/auth/login", json={
+            "username": "testuser",
+            "password": "password"
+        })
+        self.token = response.json()["access_token"]
+        self.headers = {"Authorization": f"Bearer {self.token}"}</h1></h2></h3></h4></p>
+
+<p>    @task(3)
+    def view_dashboard(self):
+        self.client.get("/api/v1/users/dashboard", headers=self.headers)</h1></h2></h3></h4></p>
+
+<p>    @task(2)
+    def view_pain_history(self):
+        self.client.get("/api/v1/pain/history", headers=self.headers)</h1></h2></h3></h4></p>
+
+<p>    @task(1)
+    def create_pain_log(self):
+        self.client.post(
+            "/api/v1/pain/log",
+            json={"pain_level": 5, "pain_locations": '["back"]'},
+            headers=self.headers
+        )
+</code></pre></h1></h2></h3></h4></p>
+
+<strong>Run load test:</strong></h1></h2></h3></h4>
+
+<pre><code>locust -f tests/load_test.py --host=http://localhost:8000
+<h1>Open http://localhost:8089 to configure and run
+</code></pre></h1></h2></h3></h4>
+
+<p>---</h1></h2></h3></h4></p>
+
+<h2>Maintenance and Monitoring</h1></h2></h3></h4>
+
+<h3>Logging</h1></h2></h3></h4>
+
+<strong>Configuration:</strong></h1></h2></h3></h4>
+
+<pre><code><h1>backend/config/logging_config.py
+import logging
+from logging.handlers import RotatingFileHandler
+import sys</h1></h2></h3></h4>
+
+<p>def setup_logging():
+    # Create logger
+    logger = logging.getLogger("pain_management")
+    logger.setLevel(logging.INFO)</h1></h2></h3></h4></p>
+
+<p>    # Console handler
+    console_handler = logging.StreamHandler(sys.stdout)
+    console_handler.setLevel(logging.INFO)
+    console_formatter = logging.Formatter(
+        '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+    )
+    console_handler.setFormatter(console_formatter)</h1></h2></h3></h4></p>
+
+<p>    # File handler (rotating)
+    file_handler = RotatingFileHandler(
+        'logs/app.log',
+        maxBytes=10485760,  # 10MB
+        backupCount=10
+    )
+    file_handler.setLevel(logging.INFO)
+    file_formatter = logging.Formatter(
+        '%(asctime)s - %(name)s - %(levelname)s - [%(filename)s:%(lineno)d] - %(message)s'
+    )
+    file_handler.setFormatter(file_formatter)</h1></h2></h3></h4></p>
+
+<p>    logger.addHandler(console_handler)
+    logger.addHandler(file_handler)</h1></h2></h3></h4></p>
+
+<p>    return logger</h1></h2></h3></h4></p>
+
+<p>logger = setup_logging()
+</code></pre></h1></h2></h3></h4></p>
+
+<strong>Usage:</strong></h1></h2></h3></h4>
+
+<pre><code>from backend.config.logging_config import logger</h1></h2></h3></h4>
+
+<p>logger.info("User logged in", extra={"user_id": user.id})
+logger.warning("High pain level reported", extra={"pain_level": 9, "user_id": user.id})
+logger.error("Database connection failed", exc_info=True)
+</code></pre></h1></h2></h3></h4></p>
+
+<h3>Monitoring</h1></h2></h3></h4>
+
+<strong>Health Check Endpoint:</strong></h1></h2></h3></h4>
+
+<pre><code>@app.get("/health")
+async def health_check():
+    """Comprehensive health check"""
+    health_status = {
+        "status": "healthy",
+        "timestamp": datetime.utcnow().isoformat(),
+        "checks": {}
+    }</h1></h2></h3></h4>
+
+<p>    # Database check
+    try:
+        db.execute("SELECT 1")
+        health_status["checks"]["database"] = "healthy"
+    except Exception as e:
+        health_status["checks"]["database"] = "unhealthy"
+        health_status["status"] = "unhealthy"
+        logger.error(f"Database health check failed: {e}")</h1></h2></h3></h4></p>
+
+<p>    # Redis check
+    try:
+        redis_client.ping()
+        health_status["checks"]["redis"] = "healthy"
+    except Exception as e:
+        health_status["checks"]["redis"] = "unhealthy"
+        logger.error(f"Redis health check failed: {e}")</h1></h2></h3></h4></p>
+
+<p>    # Vector DB check
+    try:
+        vector_store.similarity_search("test", k=1)
+        health_status["checks"]["vector_db"] = "healthy"
+    except Exception as e:
+        health_status["checks"]["vector_db"] = "unhealthy"
+        logger.error(f"Vector DB health check failed: {e}")</h1></h2></h3></h4></p>
+
+<p>    return health_status
+</code></pre></h1></h2></h3></h4></p>
+
+<strong>Metrics Collection:</strong></h1></h2></h3></h4>
+
+<pre><code>from prometheus_client import Counter, Histogram
+import time</h1></h2></h3></h4>
+
+<h1>Define metrics
+request_count = Counter('http_requests_total', 'Total HTTP requests', ['method', 'endpoint', 'status'])
+request_duration = Histogram('http_request_duration_seconds', 'HTTP request duration')</h1></h2></h3></h4>
+
+<p>@app.middleware("http")
+async def metrics_middleware(request: Request, call_next):
+    start_time = time.time()</h1></h2></h3></h4></p>
+
+<p>    response = await call_next(request)</h1></h2></h3></h4></p>
+
+<p>    duration = time.time() - start_time
+    request_count.labels(
+        method=request.method,
+        endpoint=request.url.path,
+        status=response.status_code
+    ).inc()
+    request_duration.observe(duration)</h1></h2></h3></h4></p>
+
+<p>    return response
+</code></pre></h1></h2></h3></h4></p>
+
+<h3>Backup Strategy</h1></h2></h3></h4>
+
+<strong>Automated Backups:</strong></h1></h2></h3></h4>
+
+<pre><code>#!/bin/bash
+<h1>scripts/backup.sh</h1></h2></h3></h4>
+
+<p>DATE=$(date +%Y%m%d_%H%M%S)
+BACKUP_DIR="/backups"
+RETENTION_DAYS=30</h1></h2></h3></h4></p>
+
+<h1>Database backup
+docker-compose exec -T postgres pg_dump -U postgres pain_management | \
+    gzip > $BACKUP_DIR/db_backup_$DATE.sql.gz</h1></h2></h3></h4>
+
+<h1>Vector DB backup (ChromaDB)
+tar -czf $BACKUP_DIR/chromadb_backup_$DATE.tar.gz rag/chromadb/</h1></h2></h3></h4>
+
+<h1>Uploaded documents backup
+tar -czf $BACKUP_DIR/documents_backup_$DATE.tar.gz rag/documents/</h1></h2></h3></h4>
+
+<h1>Delete old backups
+find $BACKUP_DIR -name "*.gz" -mtime +$RETENTION_DAYS -delete</h1></h2></h3></h4>
+
+<h1>Upload to S3 (optional)
+aws s3 cp $BACKUP_DIR/db_backup_$DATE.sql.gz s3://pain-management-backups/</h1></h2></h3></h4>
+
+<p>echo "Backup completed: $DATE"
+</code></pre></h1></h2></h3></h4></p>
+
+<strong>Add to crontab:</strong></h1></h2></h3></h4>
+
+<pre><code><h1>Run daily at 2 AM
+0 2 <em> </em> * /app/scripts/backup.sh >> /var/log/backup.log 2>&1
+</code></pre></h1></h2></h3></h4>
+
+<h3>Database Maintenance</h1></h2></h3></h4>
+
+<pre><code>-- Vacuum and analyze (run weekly)
+VACUUM ANALYZE;</h1></h2></h3></h4>
+
+<p>-- Rebuild indexes (run monthly)
+REINDEX DATABASE pain_management;</h1></h2></h3></h4></p>
+
+<p>-- Check for bloat
+SELECT
+    schemaname,
+    tablename,
+    pg_size_pretty(pg_total_relation_size(schemaname||'.'||tablename)) AS size,
+    pg_size_pretty(pg_total_relation_size(schemaname||'.'||tablename) - pg_relation_size(schemaname||'.'||tablename)) AS external_size
+FROM pg_tables
+WHERE schemaname = 'public'
+ORDER BY pg_total_relation_size(schemaname||'.'||tablename) DESC
+LIMIT 10;
+</code></pre></h1></h2></h3></h4></p>
+
+<p>---</h1></h2></h3></h4></p>
+
+<h2>Troubleshooting</h1></h2></h3></h4>
+
+<h3>Common Issues</h1></h2></h3></h4>
+
+<h4>Issue: Database Connection Errors</h1></h2></h3></h4>
+
+<strong>Symptoms:</strong>
+<pre><code>sqlalchemy.exc.OperationalError: could not connect to server
+</code></pre></h1></h2></h3></h4>
+
+<strong>Solutions:</strong></h1></h2></h3></h4>
+
+<ol>
+<li>Check PostgreSQL is running:</li>
+</ul>
+<pre><code>docker-compose ps postgres
+<h1>or
+pg_isready -h localhost -p 5432
+</code></pre></h1></h2></h3></h4>
+
+<ol>
+<li>Verify connection string:</li>
+</ul>
+<pre><code><h1>Check .env file
+DATABASE_URL=postgresql://user:password@host:5432/database
+</code></pre></h1></h2></h3></h4>
+
+<ol>
+<li>Check firewall/network:</li>
+</ul>
+<pre><code>telnet localhost 5432
+</code></pre></h1></h2></h3></h4>
+
+<ol>
+<li>Check logs:</li>
+</ul>
+<pre><code>docker-compose logs postgres
+</code></pre></h1></h2></h3></h4>
+
+<h4>Issue: RAG Queries Failing</h1></h2></h3></h4>
+
+<strong>Symptoms:</strong>
+<pre><code>Error: No documents found in vector store
+</code></pre></h1></h2></h3></h4>
+
+<strong>Solutions:</strong></h1></h2></h3></h4>
+
+<ol>
+<li>Verify documents ingested:</li>
+</ul>
+<pre><code><h1>Python console
+from backend.services.rag_service import RAGService
+rag = RAGService()
+stats = await rag.get_stats()
+print(stats["documents_indexed"])
+</code></pre></h1></h2></h3></h4>
+
+<ol>
+<li>Check vector DB connection:</li>
+</ul>
+<pre><code><h1>For Pinecone
+import pinecone
+pinecone.init(api_key=settings.PINECONE_API_KEY, environment=settings.PINECONE_ENVIRONMENT)
+print(pinecone.list_indexes())</h1></h2></h3></h4>
+
+<h1>For ChromaDB
+import chromadb
+client = chromadb.PersistentClient(path=settings.CHROMA_DB_PATH)
+print(client.list_collections())
+</code></pre></h1></h2></h3></h4>
+
+<ol>
+<li>Re-ingest documents:</li>
+</ul>
+<pre><code>docker-compose exec backend python scripts/ingest_documents.py
+</code></pre></h1></h2></h3></h4>
+
+<h4>Issue: High Memory Usage</h1></h2></h3></h4>
+
+<strong>Symptoms:</strong>
+<ul>
+<li>Slow response times</li>
+<li>Container crashes</li>
+<li>Out of memory errors</h1></h2></h3></h4></li>
+</ul>
+
+<strong>Solutions:</strong></h1></h2></h3></h4>
+
+<ol>
+<li>Check resource usage:</li>
+</ul>
+<pre><code>docker stats
+</code></pre></h1></h2></h3></h4>
+
+<ol>
+<li>Limit container memory:</li>
+</ul>
+<pre><code><h1>docker-compose.yml
+services:
+  backend:
+    mem_limit: 2g
+    mem_reservation: 1g
+</code></pre></h1></h2></h3></h4>
+
+<ol>
+<li>Optimize database queries:</li>
+</ul>
+<pre><code><h1>Use .options() for eager loading
+users = db.query(User).options(
+    joinedload(User.pain_logs)
+).all()</h1></h2></h3></h4>
+
+<h1>Add indexes
+CREATE INDEX idx_pain_logs_user_date ON pain_logs(user_id, log_date);
+</code></pre></h1></h2></h3></h4>
+
+<ol>
+<li>Implement caching:</li>
+</ul>
+<pre><code>from functools import lru_cache</h1></h2></h3></h4>
+
+<p>@lru_cache(maxsize=100)
+def get_week_content(week_id: int):
+    return db.query(Week).filter(Week.id == week_id).first()
+</code></pre></h1></h2></h3></h4></p>
+
+<h4>Issue: Slow API Responses</h1></h2></h3></h4>
+
+<strong>Diagnostic Steps:</strong></h1></h2></h3></h4>
+
+<ol>
+<li>Enable query logging:</li>
+</ul>
+<pre><code><h1>settings.py
+DB_ECHO = True  # Prints all SQL queries
+</code></pre></h1></h2></h3></h4>
+
+<ol>
+<li>Profile endpoints:</li>
+</ul>
+<pre><code>import time
+from functools import wraps</h1></h2></h3></h4>
+
+<p>def profile(func):
+    @wraps(func)
+    async def wrapper(<em>args, </em>*kwargs):
+        start = time.time()
+        result = await func(<em>args, </em>*kwargs)
+        duration = time.time() - start
+        logger.info(f"{func.__name__} took {duration:.2f}s")
+        return result
+    return wrapper</h1></h2></h3></h4></p>
+
+<p>@router.get("/slow-endpoint")
+@profile
+async def slow_endpoint():
+    # Your code here
+    pass
+</code></pre></h1></h2></h3></h4></p>
+
+<ol>
+<li>Add database indexes:</li>
+</ul>
+<pre><code>-- Find slow queries
+SELECT query, calls, total_time, mean_time
+FROM pg_stat_statements
+ORDER BY mean_time DESC
+LIMIT 10;</h1></h2></h3></h4>
+
+<p>-- Add index
+CREATE INDEX idx_name ON table(column);
+</code></pre></h1></h2></h3></h4></p>
+
+<h3>Debug Mode</h1></h2></h3></h4>
+
+<pre><code><h1>main.py
+if settings.DEBUG:
+    @app.middleware("http")
+    async def debug_middleware(request: Request, call_next):
+        logger.debug(f"Request: {request.method} {request.url}")
+        logger.debug(f"Headers: {request.headers}")</h1></h2></h3></h4>
+
+<p>        response = await call_next(request)</h1></h2></h3></h4></p>
+
+<p>        logger.debug(f"Response Status: {response.status_code}")
+        return response
+</code></pre></h1></h2></h3></h4></p>
+
+<h3>Getting Help</h1></h2></h3></h4>
+
+<ol>
+<li><strong>Check logs first:</strong></li>
+</ul>
+<pre><code><h1>All logs
+docker-compose logs</h1></h2></h3></h4>
+
+<h1>Specific service
+docker-compose logs backend</h1></h2></h3></h4>
+
+<h1>Follow logs
+docker-compose logs -f backend</h1></h2></h3></h4>
+
+<h1>Last 100 lines
+docker-compose logs --tail=100 backend
+</code></pre></h1></h2></h3></h4>
+
+<ol>
+<li><strong>Check GitHub Issues:</strong></li>
+<li>Search existing issues</li>
+<li>Create new issue with:</li>
+<li>Error messages</li>
+<li>Steps to reproduce</li>
+<li>Environment details</li>
+<li>Log excerpts</h1></h2></h3></h4></li>
+</ul>
+
+<ol>
+<li><strong>Stack Overflow:</strong></li>
+<li>Tag: <code>pain-management-platform</code></li>
+<li>Include minimal reproducible example</h1></h2></h3></h4></li>
+</ul>
+
+<p>---</h1></h2></h3></h4></p>
+
+<h2>Contributing Guidelines</h1></h2></h3></h4>
+
+<h3>Code Style</h1></h2></h3></h4>
+
+<strong>Python (Backend):</strong></h1></h2></h3></h4>
+
+<pre><code><h1>Format with black
+black backend/</h1></h2></h3></h4>
+
+<h1>Lint with flake8
+flake8 backend/ --max-line-length=100</h1></h2></h3></h4>
+
+<h1>Type checking with mypy
+mypy backend/
+</code></pre></h1></h2></h3></h4>
+
+<strong>Style Guide:</strong>
+<ul>
+<li>Follow PEP 8</li>
+<li>Max line length: 100 characters</li>
+<li>Use type hints</li>
+<li>Docstrings for all public functions</h1></h2></h3></h4></li>
+</ul>
+
+<pre><code>def calculate_pain_change(baseline: float, current: float) -> dict:
+    """
+    Calculate change in pain level from baseline.</h1></h2></h3></h4>
+
+<p>    Args:
+        baseline: Initial pain level (0-10)
+        current: Current pain level (0-10)</h1></h2></h3></h4></p>
+
+<p>    Returns:
+        Dictionary with absolute and percent change</h1></h2></h3></h4></p>
+
+<p>    Raises:
+        ValueError: If pain levels out of range
+    """
+    if not (0 <= baseline <= 10 and 0 <= current <= 10):
+        raise ValueError("Pain levels must be between 0 and 10")</h1></h2></h3></h4></p>
+
+<p>    absolute_change = current - baseline
+    percent_change = (absolute_change / baseline * 100) if baseline != 0 else 0</h1></h2></h3></h4></p>
+
+<p>    return {
+        "absolute_change": absolute_change,
+        "percent_change": percent_change
+    }
+</code></pre></h1></h2></h3></h4></p>
+
+<strong>TypeScript (Frontend):</strong></h1></h2></h3></h4>
+
+<pre><code><h1>Format with prettier
+prettier --write src/</h1></h2></h3></h4>
+
+<h1>Lint with eslint
+eslint src/ --ext .ts,.tsx
+</code></pre></h1></h2></h3></h4>
+
+<h3>Git Workflow</h1></h2></h3></h4>
+
+<strong>Branch Naming:</strong>
+<pre><code>feature/add-user-dashboard
+bugfix/fix-login-error
+hotfix/critical-security-patch
+docs/update-readme
+</code></pre></h1></h2></h3></h4>
+
+<strong>Commit Messages:</strong>
+<pre><code>feat: add pain tracking analytics endpoint
+fix: resolve database connection timeout
+docs: update API documentation
+test: add unit tests for assessment scoring
+refactor: extract RAG service methods
+chore: update dependencies
+</code></pre></h1></h2></h3></h4>
+
+<strong>Pull Request Process:</strong></h1></h2></h3></h4>
+
+<ol>
+<li>Create feature branch from <code>main</code></li>
+<li>Make changes with clear commits</li>
+<li>Write/update tests</li>
+<li>Update documentation</li>
+<li>Run tests locally</li>
+<li>Create PR with description:</li>
+<li>What changed</li>
+<li>Why it changed</li>
+<li>How to test</li>
+<li>Address review comments</li>
+<li>Squash and merge</h1></h2></h3></h4></li>
+</ul>
+
+<h3>Adding New Features</h1></h2></h3></h4>
+
+<strong>Checklist:</strong></h1></h2></h3></h4>
+
+<p>☐ Create issue describing feature
+☐ Design database changes (if needed)
+☐ Implement backend logic
+☐ Add API endpoints
+☐ Write tests (aim for >80% coverage)
+☐ Update API documentation
+☐ Implement frontend (if needed)
+☐ Write user documentation
+☐ Create migration (if database changed)
+☐ Update CHANGELOG.md</h1></h2></h3></h4></p>
+
+<p>---</h1></h2></h3></h4></p>
+
+<h2>API Reference</h1></h2></h3></h4>
+
+<h3>Authentication</h1></h2></h3></h4>
+
+<h4>POST /api/v1/auth/register
+Register a new user.</h1></h2></h3></h4>
+
+<strong>Request:</strong>
+<pre><code>{
+  "email": "user@example.com",
+  "username": "username",
+  "password": "SecurePassword123!",
+  "first_name": "John",
+  "last_name": "Doe"
+}
+</code></pre></h1></h2></h3></h4>
+
+<strong>Response: 201 Created</strong>
+<pre><code>{
+  "id": 1,
+  "email": "user@example.com",
+  "username": "username",
+  "role": "patient"
+}
+</code></pre></h1></h2></h3></h4>
+
+<h4>POST /api/v1/auth/login
+Login and receive access token.</h1></h2></h3></h4>
+
+<strong>Request:</strong>
+<pre><code>{
+  "username": "username",
+  "password": "SecurePassword123!"
+}
+</code></pre></h1></h2></h3></h4>
+
+<strong>Response: 200 OK</strong>
+<pre><code>{
+  "access_token": "eyJhbGci....",
+  "token_type": "bearer"
+}
+</code></pre></h1></h2></h3></h4>
+
+<h3>Pain Tracking</h1></h2></h3></h4>
+
+<h4>POST /api/v1/pain/log
+Create pain log entry.</h1></h2></h3></h4>
+
+<strong>Headers:</strong>
+<pre><code>Authorization: Bearer {token}
+</code></pre></h1></h2></h3></h4>
+
+<strong>Request:</strong>
+<pre><code>{
+  "pain_level": 7,
+  "pain_locations": "[\"lower_back\", \"hip_right\"]",
+  "sleep_quality": 4,
+  "fatigue_level": 8,
+  "notes": "Pain worse after sitting"
+}
+</code></pre></h1></h2></h3></h4>
+
+<strong>Response: 200 OK</strong>
+<pre><code>{
+  "id": 123,
+  "user_id": 1,
+  "pain_level": 7,
+  "log_date": "2024-01-15T10:30:00Z",
+  "created_at": "2024-01-15T10:30:00Z"
+}
+</code></pre></h1></h2></h3></h4>
+
+<h4>GET /api/v1/pain/history
+Get pain log history.</h1></h2></h3></h4>
+
+<strong>Query Parameters:</strong>
+<ul>
+<li><code>limit</code> (optional): Number of entries (default: 30)</h1></h2></h3></h4></li>
+</ul>
+
+<strong>Response: 200 OK</strong>
+<pre><code>[
+  {
+    "id": 123,
+    "pain_level": 7,
+    "log_date": "2024-01-15T10:30:00Z"
+  },
+  ...
+]
+</code></pre></h1></h2></h3></h4>
+
+<h3>RAG / AI Q&A</h1></h2></h3></h4>
+
+<h4>POST /api/v1/rag/query
+Ask AI a question.</h1></h2></h3></h4>
+
+<strong>Request:</strong>
+<pre><code>{
+  "query": "What are the side effects of NSAIDs?",
+  "conversation_id": null,
+  "use_history": true
+}
+</code></pre></h1></h2></h3></h4>
+
+<strong>Response: 200 OK</strong>
+<pre><code>{
+  "response": "NSAIDs can cause several side effects including...",
+  "sources": [
+    {
+      "content": "NSAIDs inhibit COX enzymes...",
+      "source": "medication_guide.pdf",
+      "chunk_index": 5
+    }
+  ],
+  "conversation_id": 45,
+  "message_id": 90,
+  "response_time_ms": 1250
+}
+</code></pre></h1></h2></h3></h4>
+
+<h3>[Continue with remaining endpoints...]</h1></h2></h3></h4>
+
+<p>---</h1></h2></h3></h4></p>
+
+<h2>Appendix</h1></h2></h3></h4>
+
+<h3>Glossary</h1></h2></h3></h4>
+
+<strong>ADL</strong>: Activities of Daily Living
+<strong>API</strong>: Application Programming Interface
+<strong>CORS</strong>: Cross-Origin Resource Sharing
+<strong>JWT</strong>: JSON Web Token
+<strong>LLM</strong>: Large Language Model
+<strong>MME</strong>: Morphine Milligram Equivalent
+<strong>NSAID</strong>: Nonsteroidal Anti-Inflammatory Drug
+<strong>ORM</strong>: Object-Relational Mapping
+<strong>PHI</strong>: Protected Health Information
+<strong>RAG</strong>: Retrieval-Augmented Generation
+<strong>REST</strong>: Representational State Transfer
+<strong>VAS</strong>: Visual Analog Scale</h1></h2></h3></h4>
+
+<h3>Useful Commands Cheat Sheet</h1></h2></h3></h4>
+
+<pre><code><h1>Docker
+docker-compose up -d              # Start services
+docker-compose down               # Stop services
+docker-compose ps                 # List services
+docker-compose logs -f backend    # Follow logs
+docker-compose restart backend    # Restart service
+docker-compose exec backend bash  # Shell into container</h1></h2></h3></h4>
+
+<h1>Database
+alembic upgrade head              # Run migrations
+alembic revision -m "message"     # Create migration
+pg_dump pain_management > backup.sql  # Backup
+psql pain_management < backup.sql     # Restore</h1></h2></h3></h4>
+
+<h1>Python
+pip install -r requirements.txt   # Install dependencies
+pytest                            # Run tests
+pytest --cov                      # Run with coverage
+black .                           # Format code
+flake8 .                          # Lint code</h1></h2></h3></h4>
+
+<h1>Git
+git checkout -b feature/name      # Create branch
+git add .                         # Stage changes
+git commit -m "message"           # Commit
+git push origin feature/name      # Push branch
+git pull origin main              # Pull changes
+</code></pre></h1></h2></h3></h4>
+
+<p>---</h1></h2></h3></h4></p>
+
+<strong>End of Technical Manual</strong></h1></h2></h3></h4>
+
+<em>Version 1.0 | Last Updated: 2024</em></h1></h2></h3></h4>
+
+<p>For questions or contributions, please refer to the Contributing Guidelines or open an issue on GitHub.
+</p>
+
+    <hr>
+    <footer style="text-align: center; color: #7f8c8d; margin-top: 60px;">
+        <p><small>Pain Management Support Group Platform v1.0.0</small></p>
+    </footer>
+</body>
+</html>

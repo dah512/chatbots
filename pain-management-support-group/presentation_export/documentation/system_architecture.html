@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Architecture</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+            line-height: 1.6;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            color: #333;
+            background: #fff;
+        }
+
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #34495e;
+            border-bottom: 2px solid #95a5a6;
+            padding-bottom: 8px;
+            margin-top: 40px;
+        }
+
+        h3 {
+            color: #34495e;
+            margin-top: 30px;
+        }
+
+        h4 {
+            color: #7f8c8d;
+            margin-top: 20px;
+        }
+
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Monaco', 'Courier New', monospace;
+            font-size: 0.9em;
+            color: #c7254e;
+        }
+
+        pre {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 20px;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+
+        pre code {
+            background: none;
+            color: inherit;
+            padding: 0;
+        }
+
+        ul, ol {
+            margin: 15px 0;
+            padding-left: 30px;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px 0;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background: #3498db;
+            color: white;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        hr {
+            border: none;
+            border-top: 2px solid #ecf0f1;
+            margin: 40px 0;
+        }
+
+        blockquote {
+            border-left: 4px solid #3498db;
+            margin: 20px 0;
+            padding: 10px 20px;
+            background: #f8f9fa;
+            font-style: italic;
+        }
+
+        .header-info {
+            background: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+
+        .header-info strong {
+            color: #2c3e50;
+        }
+
+        @media print {
+            body {
+                max-width: none;
+                padding: 20px;
+            }
+
+            pre {
+                page-break-inside: avoid;
+            }
+
+            h1, h2, h3 {
+                page-break-after: avoid;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 20px 10px;
+            }
+
+            pre {
+                padding: 10px;
+                font-size: 0.85em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header-info">
+        <strong>Pain Management Support Group Platform</strong><br>
+        Generated: November 20, 2026 at 03:22 AM<br>
+        Document: System Architecture
+    </div>
+
+    <p># Pain Management Support Group - System Architecture</h1></h2></h3></h4></p>
+
+<h2>Overview
+This is a comprehensive web-based platform for an 8-week Pain Management Support Group program. The system integrates educational content delivery, assessment tools, progress tracking, and AI-powered document Q&A capabilities.</h1></h2></h3></h4>
+
+<h2>System Components</h1></h2></h3></h4>
+
+<h3>1. Frontend (React + TypeScript)
+<strong>Purpose:</strong> User interface for patients, instructors, and administrators</h1></h2></h3></h4>
+
+<strong>Key Features:</strong>
+<ul>
+<li>Patient dashboard with progress tracking</li>
+<li>Interactive curriculum viewer</li>
+<li>Pre/post assessment interface</li>
+<li>Pain tracking journal</li>
+<li>Discussion forums</li>
+<li>Visual learning aids viewer</li>
+<li>Exercise video player (Tai Chi, Qi Gong, Yoga)</li>
+<li>Nutrition planner</li>
+<li>AI-powered Q&A chatbot</h1></h2></h3></h4></li>
+</ul>
+
+<strong>Tech Stack:</strong>
+<ul>
+<li>React 18+ with TypeScript</li>
+<li>React Router for navigation</li>
+<li>Context API + Redux for state management</li>
+<li>Axios for API calls</li>
+<li>Chart.js for data visualization</li>
+<li>TailwindCSS for styling (warm, soothing color palette)</li>
+<li>Material-UI components</h1></h2></h3></h4></li>
+</ul>
+
+<h3>2. Backend API (FastAPI + Python)
+<strong>Purpose:</strong> RESTful API server handling all business logic</h1></h2></h3></h4>
+
+<strong>Tech Stack:</strong>
+<ul>
+<li>FastAPI (Python 3.11+)</li>
+<li>Pydantic for data validation</li>
+<li>SQLAlchemy ORM</li>
+<li>PostgreSQL database</li>
+<li>JWT authentication</li>
+<li>Celery for background tasks</h1></h2></h3></h4></li>
+</ul>
+
+<strong>API Endpoints:</strong></h1></h2></h3></h4>
+
+<h4>Authentication & Users
+<ul>
+<li>POST <code>/api/auth/register</code> - Register new patient</li>
+<li>POST <code>/api/auth/login</code> - User login</li>
+<li>GET <code>/api/users/profile</code> - Get user profile</li>
+<li>PUT <code>/api/users/profile</code> - Update profile</h1></h2></h3></h4></li>
+</ul>
+
+<h4>Curriculum
+<ul>
+<li>GET <code>/api/curriculum/weeks</code> - List all weeks</li>
+<li>GET <code>/api/curriculum/week/{id}</code> - Get week details</li>
+<li>GET <code>/api/curriculum/week/{id}/sessions</code> - Get sessions for week</li>
+<li>GET <code>/api/curriculum/session/{id}</code> - Get session content</h1></h2></h3></h4></li>
+</ul>
+
+<h4>Assessments
+<ul>
+<li>GET <code>/api/assessments/week/{week_num}/pre</code> - Get pre-test</li>
+<li>POST <code>/api/assessments/week/{week_num}/pre/submit</code> - Submit pre-test</li>
+<li>GET <code>/api/assessments/week/{week_num}/post</code> - Get post-test</li>
+<li>POST <code>/api/assessments/week/{week_num}/post/submit</code> - Submit post-test</li>
+<li>GET <code>/api/assessments/results</code> - Get user's assessment history</h1></h2></h3></h4></li>
+</ul>
+
+<h4>Pain Tracking
+<ul>
+<li>POST <code>/api/pain/log</code> - Log pain entry</li>
+<li>GET <code>/api/pain/history</code> - Get pain history</li>
+<li>GET <code>/api/pain/analytics</code> - Get pain analytics</h1></h2></h3></h4></li>
+</ul>
+
+<h4>Progress Tracking
+<ul>
+<li>GET <code>/api/progress/overview</code> - Overall progress</li>
+<li>GET <code>/api/progress/week/{week_num}</code> - Week-specific progress</li>
+<li>POST <code>/api/progress/activity</code> - Log activity completion</h1></h2></h3></h4></li>
+</ul>
+
+<h4>RAG/AI Q&A
+<ul>
+<li>POST <code>/api/rag/query</code> - Ask question to AI</li>
+<li>GET <code>/api/rag/conversations</code> - Get conversation history</h1></h2></h3></h4></li>
+</ul>
+
+<h4>Resources
+<ul>
+<li>GET <code>/api/resources/visual-aids</code> - Get visual aids</li>
+<li>GET <code>/api/resources/slides/{week_num}</code> - Get slides for week</li>
+<li>GET <code>/api/resources/materials</code> - Get supplementary materials</h1></h2></h3></h4></li>
+</ul>
+
+<h3>3. Database (PostgreSQL)
+<strong>Purpose:</strong> Persistent storage for all application data</h1></h2></h3></h4>
+
+<strong>Main Tables:</strong>
+<ul>
+<li><code>users</code> - User accounts and profiles</li>
+<li><code>curriculum_weeks</code> - 8-week structure</li>
+<li><code>curriculum_sessions</code> - 32 session details</li>
+<li><code>assessments</code> - Pre/post test questions</li>
+<li><code>assessment_submissions</code> - User responses</li>
+<li><code>pain_logs</code> - Daily pain tracking entries</li>
+<li><code>progress_tracking</code> - Activity completion status</li>
+<li><code>discussion_posts</code> - Forum posts</li>
+<li><code>resources</code> - Educational materials metadata</li>
+<li><code>rag_conversations</code> - AI chat history</h1></h2></h3></h4></li>
+</ul>
+
+<h3>4. RAG System (LangChain + Vector DB)
+<strong>Purpose:</strong> AI-powered document Q&A using embedded medical literature</h1></h2></h3></h4>
+
+<strong>Components:</strong>
+<ul>
+<li><strong>Document Ingestion Pipeline:</strong></li>
+<li>PDF parsers for medical journals</li>
+<li>Text chunking with semantic awareness</li>
+<li>Metadata extraction (source, date, topic)</h1></h2></h3></h4></li>
+</ul>
+
+<ul>
+<li><strong>Embedding Generation:</strong></li>
+<li>Model: OpenAI text-embedding-3-large</li>
+<li>Chunk size: 512 tokens with 50-token overlap</h1></h2></h3></h4></li>
+</ul>
+
+<ul>
+<li><strong>Vector Database Options:</strong></li>
+<li><strong>Primary:</strong> Pinecone (cloud-based, production)</li>
+<li><strong>Alternative:</strong> ChromaDB (local development)</h1></h2></h3></h4></li>
+</ul>
+
+<ul>
+<li><strong>Query Pipeline:</strong></li>
+<li>User query → Embedding → Similarity search</li>
+<li>Context retrieval (top 5 chunks)</li>
+<li>LLM generation (Claude 3.5 Sonnet) with citations</li>
+<li>Response validation for medical accuracy</h1></h2></h3></h4></li>
+</ul>
+
+<strong>Document Categories:</strong>
+<ul>
+<li>AAFP journal articles (20 years)</li>
+<li>Anatomy textbooks (12th-grade level)</li>
+<li>Pharmacology references</li>
+<li>Alternative therapy research</li>
+<li>Nutrition and metabolism guides</li>
+<li>Exercise instruction manuals</h1></h2></h3></h4></li>
+</ul>
+
+<h3>5. Assessment Engine (Python + R)
+<strong>Purpose:</strong> Statistical analysis of patient outcomes</h1></h2></h3></h4>
+
+<strong>Python Components:</strong>
+<ul>
+<li>Pre/post test generation</li>
+<li>Scoring algorithms</li>
+<li>Progress metrics calculation</li>
+<li>Data export to R</h1></h2></h3></h4></li>
+</ul>
+
+<strong>R Components:</strong>
+<ul>
+<li>Statistical analysis (paired t-tests, ANOVA)</li>
+<li>Longitudinal outcome modeling</li>
+<li>Visualization generation</li>
+<li>Report generation (PDF reports)</h1></h2></h3></h4></li>
+</ul>
+
+<strong>Metrics Tracked:</strong>
+<ul>
+<li>Pain levels (VAS scale)</li>
+<li>Sleep quality</li>
+<li>Fatigue scores</li>
+<li>Anxiety levels (GAD-7)</li>
+<li>Physical function (ROM, strength)</li>
+<li>ADL completion rates</li>
+<li>Medication usage</h1></h2></h3></h4></li>
+</ul>
+
+<h3>6. Controllers
+<strong>Purpose:</strong> Business logic layer between API and services</h1></h2></h3></h4>
+
+<strong>Key Controllers:</strong>
+<ul>
+<li><code>AuthController</code> - Authentication and authorization</li>
+<li><code>CurriculumController</code> - Content delivery logic</li>
+<li><code>AssessmentController</code> - Test administration</li>
+<li><code>ProgressController</code> - Progress calculations</li>
+<li><code>RAGController</code> - AI query orchestration</li>
+<li><code>AnalyticsController</code> - Data aggregation</h1></h2></h3></h4></li>
+</ul>
+
+<h3>7. Services Layer
+<strong>Purpose:</strong> Reusable business services</h1></h2></h3></h4>
+
+<strong>Key Services:</strong>
+<ul>
+<li><code>UserService</code> - User management</li>
+<li><code>AssessmentService</code> - Test generation and scoring</li>
+<li><code>PainTrackingService</code> - Pain data processing</li>
+<li><code>EmbeddingService</code> - Vector operations</li>
+<li><code>NotificationService</code> - Email/SMS alerts</li>
+<li><code>ReportService</code> - PDF report generation</h1></h2></h3></h4></li>
+</ul>
+
+<h2>Data Flow</h1></h2></h3></h4>
+
+<h3>Typical User Journey:
+<ol>
+<li>User registers/logs in (Frontend → Auth API)</li>
+<li>Dashboard loads progress data (Frontend → Progress API → Database)</li>
+<li>User views week content (Frontend → Curriculum API → Database)</li>
+<li>User takes pre-test (Frontend → Assessment API → Database)</li>
+<li>User attends session (content from Database)</li>
+<li>User logs pain daily (Frontend → Pain API → Database)</li>
+<li>User asks AI question (Frontend → RAG API → Vector DB → LLM → Frontend)</li>
+<li>User takes post-test (Frontend → Assessment API → Database → R Analysis)</li>
+<li>User views progress report (Frontend → Analytics API → R Engine → Frontend)</h1></h2></h3></h4></li>
+</ul>
+
+<h2>Security & Compliance</h1></h2></h3></h4>
+
+<h3>Authentication:
+<ul>
+<li>JWT tokens with refresh mechanism</li>
+<li>Password hashing (bcrypt)</li>
+<li>Role-based access control (Patient, Instructor, Admin)</h1></h2></h3></h4></li>
+</ul>
+
+<h3>Data Privacy:
+<ul>
+<li>HIPAA compliance considerations</li>
+<li>PHI encryption at rest and in transit</li>
+<li>Audit logging for data access</li>
+<li>Data anonymization for research</h1></h2></h3></h4></li>
+</ul>
+
+<h3>API Security:
+<ul>
+<li>Rate limiting</li>
+<li>CORS configuration</li>
+<li>Input validation</li>
+<li>SQL injection prevention</li>
+<li>XSS protection</h1></h2></h3></h4></li>
+</ul>
+
+<h2>Deployment Architecture</h1></h2></h3></h4>
+
+<h3>Development:
+<ul>
+<li>Local PostgreSQL database</li>
+<li>ChromaDB for vector storage</li>
+<li>Docker Compose for services</li>
+<li>Hot reload for frontend/backend</h1></h2></h3></h4></li>
+</ul>
+
+<h3>Production:
+<ul>
+<li><strong>Cloud Provider:</strong> AWS/Azure/GCP</li>
+<li><strong>Frontend:</strong> Vercel or S3 + CloudFront</li>
+<li><strong>Backend:</strong> ECS/Kubernetes pods</li>
+<li><strong>Database:</strong> RDS PostgreSQL (Multi-AZ)</li>
+<li><strong>Vector DB:</strong> Pinecone (managed)</li>
+<li><strong>Cache:</strong> Redis</li>
+<li><strong>CDN:</strong> CloudFront for static assets</li>
+<li><strong>Monitoring:</strong> DataDog/New Relic</li>
+<li><strong>Logging:</strong> ELK stack</h1></h2></h3></h4></li>
+</ul>
+
+<h3>Scaling Strategy:
+<ul>
+<li>Horizontal scaling for API servers</li>
+<li>Database read replicas</li>
+<li>CDN for static content</li>
+<li>Background job queues (Celery + Redis)</h1></h2></h3></h4></li>
+</ul>
+
+<h2>Technology Stack Summary</h1></h2></h3></h4>
+
+<p>| Layer | Technology | Purpose |
+<tr><td>-------|-----------|---------</td></tr>
+<tr><td> Frontend | React + TypeScript | User interface </td></tr>
+<tr><td> API | FastAPI | REST endpoints </td></tr>
+<tr><td> Database | PostgreSQL | Relational data </td></tr>
+<tr><td> Vector DB | Pinecone/ChromaDB | Embeddings </td></tr>
+<tr><td> Cache | Redis | Session/query cache </td></tr>
+<tr><td> Background Jobs | Celery | Async tasks </td></tr>
+<tr><td> LLM | Claude 3.5 Sonnet | AI responses </td></tr>
+<tr><td> Embeddings | OpenAI API | Vector generation </td></tr>
+<tr><td> Analytics | Python + R | Statistical analysis </td></tr>
+<tr><td> Containerization | Docker | Deployment </td></tr>
+<tr><td> Orchestration | Docker Compose/K8s | Service management </td></tr>
+<tr><td> Version Control | Git/GitHub | Code management </td></tr>
+<tr><td> CI/CD | GitHub Actions | Automation </td></tr></h1></h2></h3></h4></p>
+
+<h2>Development Workflow</h1></h2></h3></h4>
+
+<ol>
+<li><strong>Local Development:</strong></li>
+</ul>
+   <pre><code>   docker-compose up  # Start all services
+   cd frontend && npm run dev  # Frontend dev server
+   cd backend && uvicorn main:app --reload  # Backend dev server
+   </code></pre></h1></h2></h3></h4>
+
+<ol>
+<li><strong>Testing:</strong></li>
+<li>Unit tests: pytest (backend), Jest (frontend)</li>
+<li>Integration tests: API test suite</li>
+<li>E2E tests: Playwright</h1></h2></h3></h4></li>
+</ul>
+
+<ol>
+<li><strong>Deployment:</strong></li>
+<li>Push to GitHub → Actions run tests</li>
+<li>Merge to main → Auto-deploy to staging</li>
+<li>Manual promotion to production</h1></h2></h3></h4></li>
+</ul>
+
+<h2>Future Enhancements</h1></h2></h3></h4>
+
+<ol>
+<li><strong>Mobile App:</strong> React Native version</li>
+<li><strong>Telehealth Integration:</strong> Video conferencing for remote sessions</li>
+<li><strong>Wearables Integration:</strong> Apple Health, Fitbit data import</li>
+<li><strong>Multilingual Support:</strong> Spanish, Chinese translations</li>
+<li><strong>Gamification:</strong> Achievement badges, progress milestones</li>
+<li><strong>Social Features:</strong> Patient-to-patient support groups</li>
+<li><strong>Provider Dashboard:</strong> For physicians to monitor patients</li>
+<li><strong>Research Portal:</strong> Anonymized data for pain management research</h1></h2></h3></h4></li>
+</ul>
+
+<h2>File Structure</h1></h2></h3></h4>
+
+<pre><code>pain-management-support-group/
+├── backend/
+│   ├── api/
+│   │   ├── routes/
+│   │   ├── middleware/
+│   │   └── dependencies.py
+│   ├── models/
+│   ├── controllers/
+│   ├── services/
+│   ├── utils/
+│   └── config/
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── hooks/
+│   │   ├── context/
+│   │   ├── services/
+│   │   └── styles/
+│   └── public/
+├── curriculum/
+│   └── week-{01-08}/
+├── assessments/
+│   ├── python/
+│   └── r/
+├── rag/
+│   ├── documents/
+│   ├── embeddings/
+│   └── prompts/
+├── docker/
+├── docs/
+└── tests/
+</code></pre></h1></h2></h3></h4>
+
+<h2>Conclusion</h1></h2></h3></h4>
+
+<p>This architecture provides a scalable, secure, and user-friendly platform for delivering comprehensive pain management education and support. The modular design allows for independent development and testing of components while maintaining clear interfaces between layers.
+</p>
+
+    <hr>
+    <footer style="text-align: center; color: #7f8c8d; margin-top: 60px;">
+        <p><small>Pain Management Support Group Platform v1.0.0</small></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platform Overview</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+            line-height: 1.6;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            color: #333;
+            background: #fff;
+        }
+
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #34495e;
+            border-bottom: 2px solid #95a5a6;
+            padding-bottom: 8px;
+            margin-top: 40px;
+        }
+
+        h3 {
+            color: #34495e;
+            margin-top: 30px;
+        }
+
+        h4 {
+            color: #7f8c8d;
+            margin-top: 20px;
+        }
+
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Monaco', 'Courier New', monospace;
+            font-size: 0.9em;
+            color: #c7254e;
+        }
+
+        pre {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 20px;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+
+        pre code {
+            background: none;
+            color: inherit;
+            padding: 0;
+        }
+
+        ul, ol {
+            margin: 15px 0;
+            padding-left: 30px;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px 0;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background: #3498db;
+            color: white;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        hr {
+            border: none;
+            border-top: 2px solid #ecf0f1;
+            margin: 40px 0;
+        }
+
+        blockquote {
+            border-left: 4px solid #3498db;
+            margin: 20px 0;
+            padding: 10px 20px;
+            background: #f8f9fa;
+            font-style: italic;
+        }
+
+        .header-info {
+            background: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+
+        .header-info strong {
+            color: #2c3e50;
+        }
+
+        @media print {
+            body {
+                max-width: none;
+                padding: 20px;
+            }
+
+            pre {
+                page-break-inside: avoid;
+            }
+
+            h1, h2, h3 {
+                page-break-after: avoid;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 20px 10px;
+            }
+
+            pre {
+                padding: 10px;
+                font-size: 0.85em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header-info">
+        <strong>Pain Management Support Group Platform</strong><br>
+        Generated: November 20, 2026 at 03:22 AM<br>
+        Document: Platform Overview
+    </div>
+
+    <p># Pain Management Support Group Platform</h1></h2></h3></h4></p>
+
+<p>A comprehensive web-based platform for delivering an 8-week Pain Management Support Group program. This system integrates educational content delivery, AI-powered Q&A, pain tracking, assessment tools, and outcome analytics.</h1></h2></h3></h4></p>
+
+<h2>🎯 Project Overview</h1></h2></h3></h4>
+
+<p>This platform was designed to address a critical gap in pain management care: empowering patients with knowledge, reducing power differentials between patients and providers, and providing evidence-based alternatives to traditional pain management approaches.</h1></h2></h3></h4></p>
+
+<h3>Key Features</h1></h2></h3></h4>
+
+<ul>
+<li><strong>8-Week Structured Curriculum</strong>: 32 sessions covering pain science, pharmacology, alternative therapies, nutrition, and self-advocacy</li>
+<li><strong>AI-Powered Q&A</strong>: RAG-based chatbot using LangChain and vector databases for answering patient questions</li>
+<li><strong>Comprehensive Tracking</strong>: Daily pain logs, sleep quality, fatigue, anxiety, and functional assessments</li>
+<li><strong>Assessment Tools</strong>: Pre/post tests with Python-based generation and R-based statistical analysis</li>
+<li><strong>Discussion Forums</strong>: Safe space for patients to share experiences without fear of reprisal</li>
+<li><strong>Visual Learning Aids</strong>: Anatomical diagrams, nerve pathways, and educational infographics</li>
+<li><strong>Multi-modal Approach</strong>: Integration of Tai Chi, Qi Gong, Yoga, and nutrition education</h1></h2></h3></h4></li>
+</ul>
+
+<h3>Target Audience</h1></h2></h3></h4>
+
+<p>Middle-aged adults dealing with chronic pain from multiple conditions including:
+<ul>
+<li>Orthopedic injuries (back, neck, shoulders, hips, knees)</li>
+<li>Rheumatic diseases (Rheumatoid Arthritis, SLE, Scleroderma, Sjögren's)</li>
+<li>Fibromyalgia</li>
+<li>Post-surgical pain syndromes</h1></h2></h3></h4></li>
+</ul></p>
+
+<h2>🏗️ Architecture</h1></h2></h3></h4>
+
+<h3>Technology Stack</h1></h2></h3></h4>
+
+<p>| Component | Technology |
+<tr><td>-----------|-----------</td></tr>
+<tr><td> <strong>Backend</strong> | FastAPI (Python 3.11+) </td></tr>
+<tr><td> <strong>Database</strong> | PostgreSQL 15 </td></tr>
+<tr><td> <strong>Vector DB</strong> | Pinecone / ChromaDB </td></tr>
+<tr><td> <strong>Cache</strong> | Redis </td></tr>
+<tr><td> <strong>Frontend</strong> | React 18+ with TypeScript </td></tr>
+<tr><td> <strong>AI/LLM</strong> | OpenAI GPT-4 / Claude 3.5 Sonnet </td></tr>
+<tr><td> <strong>Embeddings</strong> | OpenAI text-embedding-3-large </td></tr>
+<tr><td> <strong>RAG Framework</strong> | LangChain </td></tr>
+<tr><td> <strong>Analytics</strong> | Python (Pandas, NumPy) + R </td></tr>
+<tr><td> <strong>Containerization</strong> | Docker & Docker Compose </td></tr>
+<tr><td> <strong>ORM</strong> | SQLAlchemy </td></tr>
+<tr><td> <strong>Authentication</strong> | JWT with OAuth2 </td></tr></h1></h2></h3></h4></p>
+
+<h3>System Components</h1></h2></h3></h4>
+
+<pre><code>pain-management-support-group/
+├── backend/              # FastAPI backend application
+│   ├── api/             # API routes
+│   ├── models/          # Database models
+│   ├── controllers/     # Business logic controllers
+│   ├── services/        # Service layer (RAG, email, etc.)
+│   ├── utils/           # Utility functions
+│   └── config/          # Configuration management
+├── frontend/            # React frontend application
+│   ├── src/
+│   │   ├── components/  # Reusable UI components
+│   │   ├── pages/       # Page components
+│   │   ├── hooks/       # Custom React hooks
+│   │   ├── context/     # React context providers
+│   │   └── services/    # API client services
+│   └── public/          # Static assets
+├── curriculum/          # 8-week curriculum content
+│   ├── week-01/         # Week 1 materials
+│   │   ├── sessions/    # Individual session content
+│   │   ├── materials/   # Handouts and resources
+│   │   ├── slides/      # PowerPoint/Keynote slides
+│   │   └── assessments/ # Pre/post tests
+│   └── ...             # Weeks 2-8
+├── assessments/         # Assessment tools and analytics
+│   ├── python/          # Python assessment generators
+│   └── r/               # R statistical analysis scripts
+├── research/            # Research and reference materials
+│   ├── medications/     # Drug safety data
+│   ├── support-groups/  # Global support group comparison
+│   └── literature/      # AAFP journal references
+├── rag/                 # RAG system components
+│   ├── documents/       # Source documents for knowledge base
+│   ├── embeddings/      # Vector embeddings storage
+│   └── prompts/         # LLM prompt templates
+├── visual-aids/         # Educational visual materials
+│   ├── anatomy/         # Anatomical diagrams
+│   ├── diagrams/        # Process diagrams
+│   └── infographics/    # Educational infographics
+├── database/            # Database schemas and migrations
+├── docker/              # Docker configuration files
+├── docs/                # Documentation
+└── tests/               # Test suites
+</code></pre></h1></h2></h3></h4>
+
+<h2>🚀 Getting Started</h1></h2></h3></h4>
+
+<h3>Prerequisites</h1></h2></h3></h4>
+
+<ul>
+<li>Docker and Docker Compose (recommended)</li>
+<li>OR:</li>
+<li>Python 3.11+</li>
+<li>Node.js 18+</li>
+<li>PostgreSQL 15+</li>
+<li>Redis 7+</h1></h2></h3></h4></li>
+</ul>
+
+<h3>Installation</h1></h2></h3></h4>
+
+<h4>Option 1: Docker (Recommended)</h1></h2></h3></h4>
+
+<ol>
+<li><strong>Clone the repository</strong></li>
+</ul>
+   <pre><code>   git clone https://github.com/your-org/pain-management-support-group.git
+   cd pain-management-support-group
+   </code></pre></h1></h2></h3></h4>
+
+<ol>
+<li><strong>Set up environment variables</strong></li>
+</ul>
+   <pre><code>   cp .env.example .env
+   # Edit .env with your API keys and configuration
+   </code></pre></h1></h2></h3></h4>
+
+<ol>
+<li><strong>Start all services</strong></li>
+</ul>
+   <pre><code>   docker-compose up -d
+   </code></pre></h1></h2></h3></h4>
+
+<ol>
+<li><strong>Initialize database</strong></li>
+</ul>
+   <pre><code>   docker-compose exec backend python -m backend.scripts.init_db
+   </code></pre></h1></h2></h3></h4>
+
+<ol>
+<li><strong>Access the application</strong></li>
+<li>Frontend: http://localhost:3000</li>
+<li>Backend API: http://localhost:8000</li>
+<li>API Docs: http://localhost:8000/docs</li>
+<li>PgAdmin: http://localhost:5050 (dev mode)</h1></h2></h3></h4></li>
+</ul>
+
+<h4>Option 2: Manual Setup</h1></h2></h3></h4>
+
+<strong>Backend Setup</strong></h1></h2></h3></h4>
+
+<pre><code>cd backend
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+pip install -r requirements.txt</h1></h2></h3></h4>
+
+<h1>Set up database
+createdb pain_management
+alembic upgrade head</h1></h2></h3></h4>
+
+<h1>Run backend
+uvicorn main:app --reload
+</code></pre></h1></h2></h3></h4>
+
+<strong>Frontend Setup</strong></h1></h2></h3></h4>
+
+<pre><code>cd frontend
+npm install
+npm start
+</code></pre></h1></h2></h3></h4>
+
+<h3>Configuration</h1></h2></h3></h4>
+
+<h4>Essential Environment Variables</h1></h2></h3></h4>
+
+<p>Edit <code>.env</code> file with the following required settings:</h1></h2></h3></h4></p>
+
+<pre><code><h1>OpenAI API (for LLM and embeddings)
+OPENAI_API_KEY="your-key-here"</h1></h2></h3></h4>
+
+<h1>Database
+DATABASE_URL="postgresql://postgres:postgres@localhost:5432/pain_management"</h1></h2></h3></h4>
+
+<h1>Security
+SECRET_KEY="generate-a-secure-random-key"</h1></h2></h3></h4>
+
+<h1>Vector Database (choose one)
+USE_PINECONE=false  # Set to true for Pinecone, false for ChromaDB
+PINECONE_API_KEY="your-pinecone-key"  # If using Pinecone
+</code></pre></h1></h2></h3></h4>
+
+<h2>📚 Core Features</h1></h2></h3></h4>
+
+<h3>1. Curriculum Delivery</h1></h2></h3></h4>
+
+<strong>8-Week Program Structure</strong>
+<ul>
+<li><strong>Week 1</strong>: Understanding Pain - Biology and Neuroscience</li>
+<li><strong>Week 2</strong>: Pharmacology - Medications and Mechanisms</li>
+<li><strong>Week 3</strong>: Musculoskeletal System and Common Conditions</li>
+<li><strong>Week 4</strong>: Rheumatic and Autoimmune Diseases</li>
+<li><strong>Week 5</strong>: Alternative and Complementary Therapies</li>
+<li><strong>Week 6</strong>: Nutrition, Metabolism, and Pain</li>
+<li><strong>Week 7</strong>: Movement, Function, and Activities of Daily Living</li>
+<li><strong>Week 8</strong>: Self-Advocacy and Moving Forward</h1></h2></h3></h4></li>
+</ul>
+
+<p>Each week includes:
+<ul>
+<li>4 sessions (2.5 hours each)</li>
+<li>Lectures with visual aids</li>
+<li>Movement practice (Tai Chi, Qi Gong, Yoga)</li>
+<li>Nutrition education</li>
+<li>Pre/post assessments</h1></h2></h3></h4></li>
+</ul></p>
+
+<h3>2. AI-Powered Q&A System</h1></h2></h3></h4>
+
+<strong>RAG (Retrieval-Augmented Generation) Chatbot</strong></h1></h2></h3></h4>
+
+<pre><code>from backend.services.rag_service import RAGService</h1></h2></h3></h4>
+
+<p>rag = RAGService()</h1></h2></h3></h4></p>
+
+<h1>Query the knowledge base
+result = await rag.query(
+    query="How do NSAIDs reduce inflammation?",
+    conversation_history=[]
+)</h1></h2></h3></h4>
+
+<p>print(result["response"])
+<h1>Response includes citations from medical literature
+</code></pre></h1></h2></h3></h4></p>
+
+<strong>Features:</strong>
+<ul>
+<li>Natural language queries about pain, medications, anatomy</li>
+<li>Cited responses from embedded medical literature</li>
+<li>Conversation history for context-aware answers</li>
+<li>Document upload for expanding knowledge base</h1></h2></h3></h4></li>
+</ul>
+
+<h3>3. Pain Tracking and Analytics</h1></h2></h3></h4>
+
+<strong>Daily Pain Logging</strong>
+<ul>
+<li>Pain levels (VAS 0-10 scale)</li>
+<li>Location mapping</li>
+<li>Sleep quality, fatigue, anxiety tracking</li>
+<li>Functional assessments</li>
+<li>Medication tracking</h1></h2></h3></h4></li>
+</ul>
+
+<strong>Outcome Analytics</strong>
+<pre><code>from assessments.python.outcome_analytics import OutcomeAnalytics</h1></h2></h3></h4>
+
+<p>analytics = OutcomeAnalytics()
+report = analytics.generate_patient_report(
+    user_id=123,
+    pain_logs=patient_logs,
+    assessment_scores=scores,
+    program_completion=True
+)</h1></h2></h3></h4></p>
+
+<p>print(f"Pain reduction: {report['changes']['pain_level']['absolute_change']}")
+print(f"Clinically significant: {report['clinically_significant']['pain_level']}")
+</code></pre></h1></h2></h3></h4></p>
+
+<h3>4. Statistical Analysis (R)</h1></h2></h3></h4>
+
+<pre><code>source("assessments/r/statistical_analysis.R")</h1></h2></h3></h4>
+
+<h1>Load patient data
+data <- load_patient_data("data/outcomes.csv")</h1></h2></h3></h4>
+
+<h1>Perform paired t-tests
+ttests <- perform_paired_ttests(data)</h1></h2></h3></h4>
+
+<h1>Generate comprehensive report
+results <- generate_statistical_report(data)
+</code></pre></h1></h2></h3></h4>
+
+<strong>Analyses Included:</strong>
+<ul>
+<li>Paired t-tests (pre-post comparison)</li>
+<li>Repeated measures ANOVA</li>
+<li>Longitudinal mixed-effects modeling</li>
+<li>Clinical significance calculations</li>
+<li>Effect size computations</li>
+<li>Comprehensive visualizations</h1></h2></h3></h4></li>
+</ul>
+
+<h2>📊 API Documentation</h1></h2></h3></h4>
+
+<h3>Authentication</h1></h2></h3></h4>
+
+<pre><code><h1>Register
+POST /api/v1/auth/register
+{
+  "email": "patient@example.com",
+  "username": "patient123",
+  "password": "securepass",
+  "first_name": "John",
+  "last_name": "Doe"
+}</h1></h2></h3></h4>
+
+<h1>Login
+POST /api/v1/auth/login
+{
+  "username": "patient123",
+  "password": "securepass"
+}</h1></h2></h3></h4>
+
+<h1>Response
+{
+  "access_token": "eyJ...",
+  "token_type": "bearer"
+}
+</code></pre></h1></h2></h3></h4>
+
+<h3>Curriculum</h1></h2></h3></h4>
+
+<pre><code><h1>Get all weeks
+GET /api/v1/curriculum/weeks</h1></h2></h3></h4>
+
+<h1>Get specific week
+GET /api/v1/curriculum/week/1</h1></h2></h3></h4>
+
+<h1>Get week sessions
+GET /api/v1/curriculum/week/1/sessions
+</code></pre></h1></h2></h3></h4>
+
+<h3>Pain Tracking</h1></h2></h3></h4>
+
+<pre><code><h1>Log pain entry
+POST /api/v1/pain/log
+{
+  "pain_level": 6,
+  "pain_locations": "[\"lower_back\", \"hip_right\"]",
+  "sleep_quality": 5,
+  "fatigue_level": 7,
+  "medications_taken": "[\"ibuprofen 400mg\"]"
+}</h1></h2></h3></h4>
+
+<h1>Get pain history
+GET /api/v1/pain/history?limit=30</h1></h2></h3></h4>
+
+<h1>Get analytics
+GET /api/v1/pain/analytics
+</code></pre></h1></h2></h3></h4>
+
+<h3>AI Q&A</h1></h2></h3></h4>
+
+<pre><code><h1>Query AI
+POST /api/v1/rag/query
+{
+  "query": "What are the side effects of long-term NSAID use?",
+  "conversation_id": 123,
+  "use_history": true
+}</h1></h2></h3></h4>
+
+<h1>Response
+{
+  "response": "Long-term NSAID use can lead to several side effects...",
+  "sources": [
+    {"source": "AAFP_journal_2020.pdf", "content": "..."}
+  ],
+  "conversation_id": 123,
+  "message_id": 456
+}
+</code></pre></h1></h2></h3></h4>
+
+<h3>Assessments</h1></h2></h3></h4>
+
+<pre><code><h1>Get pre-test
+GET /api/v1/assessments/week/1/pre</h1></h2></h3></h4>
+
+<h1>Submit answers
+POST /api/v1/assessments/week/1/pre/submit
+{
+  "answers": {
+    "q1": "B",
+    "q2": "A",
+    ...
+  }
+}
+</code></pre></h1></h2></h3></h4>
+
+<p>Full API documentation available at: <code>http://localhost:8000/docs</code></h1></h2></h3></h4></p>
+
+<h2>🧪 Testing</h1></h2></h3></h4>
+
+<pre><code><h1>Backend tests
+cd backend
+pytest tests/ -v --cov</h1></h2></h3></h4>
+
+<h1>Frontend tests
+cd frontend
+npm test</h1></h2></h3></h4>
+
+<h1>Integration tests
+docker-compose -f docker-compose.test.yml up --abort-on-container-exit
+</code></pre></h1></h2></h3></h4>
+
+<h2>📈 Data Privacy & Security</h1></h2></h3></h4>
+
+<h3>HIPAA Compliance Considerations</h1></h2></h3></h4>
+
+<ul>
+<li><strong>Encryption</strong>: All PHI encrypted at rest and in transit (TLS 1.3)</li>
+<li><strong>Authentication</strong>: JWT-based auth with secure token expiration</li>
+<li><strong>Access Control</strong>: Role-based access (Patient, Instructor, Admin)</li>
+<li><strong>Audit Logging</strong>: All data access logged with timestamps</li>
+<li><strong>Data Minimization</strong>: Only collect necessary health information</li>
+<li><strong>User Consent</strong>: Clear consent forms for data collection and use</h1></h2></h3></h4></li>
+</ul>
+
+<strong>Note</strong>: This system includes security features but would require full HIPAA audit and BAA agreements before handling real patient data in production.</h1></h2></h3></h4>
+
+<h2>🌍 Global Pain Support Groups - Research</h1></h2></h3></h4>
+
+<p>See <code>research/support-groups/global_comparison.md</code> for comprehensive analysis of pain support programs worldwide:</h1></h2></h3></h4></p>
+
+<ul>
+<li>UK NHS Pain Management Programmes</li>
+<li>Australian National Pain Strategy</li>
+<li>Canadian Chronic Pain Networks</li>
+<li>European pain patient advocacy</li>
+<li>Comparison with US programs</li>
+<li>Best practices and recommendations</h1></h2></h3></h4></li>
+</ul>
+
+<h2>🔬 Research Data Included</h1></h2></h3></h4>
+
+<h3>Pain Medication Statistics</h1></h2></h3></h4>
+
+<ul>
+<li>Acetaminophen hepatotoxicity rates (AAFP data 2004-2024)</li>
+<li>NSAID-related hospitalizations (GI bleeding, cardiovascular events)</li>
+<li>Opioid prescribing trends and overdose statistics</li>
+<li>Efficacy data for various pain management approaches</h1></h2></h3></h4></li>
+</ul>
+
+<p>See <code>research/medications/</code> for detailed compilations.</h1></h2></h3></h4></p>
+
+<h2>🎨 Visual Aids & Educational Materials</h1></h2></h3></h4>
+
+<p>The <code>visual-aids/</code> directory includes templates and examples for:</h1></h2></h3></h4></p>
+
+<ul>
+<li><strong>Anatomy Diagrams</strong>:</li>
+<li>Spinal cord cross-sections with nerve pathways</li>
+<li>Dermatome maps (anterior and posterior)</li>
+<li>Joint anatomy (ball-socket, hinge, pivot)</li>
+<li>Muscle and tendon structures</h1></h2></h3></h4></li>
+</ul>
+
+<ul>
+<li><strong>Pain Pathways</strong>:</li>
+<li>Nociceptor activation sequence</li>
+<li>Spinothalamic tract visualization</li>
+<li>Gate control theory diagrams</li>
+<li>Autonomic nervous system effects</h1></h2></h3></h4></li>
+</ul>
+
+<ul>
+<li><strong>Pharmacology</strong>:</li>
+<li>Drug mechanism diagrams</li>
+<li>COX pathway and NSAID inhibition</li>
+<li>Opioid receptor locations</li>
+<li>Metabolism flowcharts</h1></h2></h3></h4></li>
+</ul>
+
+<h2>🤝 Contributing</h1></h2></h3></h4>
+
+<p>We welcome contributions! Please see <code>CONTRIBUTING.md</code> for guidelines.</h1></h2></h3></h4></p>
+
+<p>Areas where contributions are especially valuable:
+<ul>
+<li>Additional curriculum content and exercises</li>
+<li>Translations (Spanish, Chinese, etc.)</li>
+<li>Alternative therapy research</li>
+<li>Outcome measurement tools</li>
+<li>UI/UX improvements</li>
+<li>Mobile app development</h1></h2></h3></h4></li>
+</ul></p>
+
+<h2>📝 License</h1></h2></h3></h4>
+
+<p>[Choose appropriate license - MIT, GPL, etc.]</h1></h2></h3></h4></p>
+
+<h2>🙏 Acknowledgments</h1></h2></h3></h4>
+
+<p>This project was inspired by the lived experience of patients navigating chronic pain management in a healthcare system that often dismisses or under-treats pain due to fear of regulatory scrutiny.</h1></h2></h3></h4></p>
+
+<p>Special thanks to:
+<ul>
+<li>Pain patients who shared their stories</li>
+<li>Healthcare providers committed to compassionate pain care</li>
+<li>Researchers advancing pain science</li>
+<li>Open-source community for excellent tools</h1></h2></h3></h4></li>
+</ul></p>
+
+<h2>📧 Contact & Support</h1></h2></h3></h4>
+
+<ul>
+<li><strong>Issues</strong>: GitHub Issues</li>
+<li><strong>Discussions</strong>: GitHub Discussions</li>
+<li><strong>Email</strong>: support@painmanagement.com</h1></h2></h3></h4></li>
+</ul>
+
+<h2>🗺️ Roadmap</h1></h2></h3></h4>
+
+<h3>Phase 1 (Current): Core Platform
+<ul>
+<li>[x] Backend API with authentication</li>
+<li>[x] Database models and migrations</li>
+<li>[x] RAG system with LangChain</li>
+<li>[x] Assessment generation tools</li>
+<li>[x] Statistical analysis scripts</li>
+<li>[x] 8-week curriculum outline</li>
+<li>[ ] Frontend UI components</li>
+<li>[ ] Visual aids library</h1></h2></h3></h4></li>
+</ul>
+
+<h3>Phase 2: Enhanced Features
+<ul>
+<li>[ ] Mobile app (React Native)</li>
+<li>[ ] Video conferencing integration</li>
+<li>[ ] Wearable device integration (Apple Health, Fitbit)</li>
+<li>[ ] Multilingual support</li>
+<li>[ ] Provider dashboard for monitoring</h1></h2></h3></h4></li>
+</ul>
+
+<h3>Phase 3: Research & Scale
+<ul>
+<li>[ ] Research portal for aggregated analytics</li>
+<li>[ ] Multi-site deployment capability</li>
+<li>[ ] EMR/EHR integration</li>
+<li>[ ] Insurance billing integration</li>
+<li>[ ] Outcome publication pipeline</h1></h2></h3></h4></li>
+</ul>
+
+<h2>💡 Usage Tips</h1></h2></h3></h4>
+
+<h3>For Program Facilitators</h1></h2></h3></h4>
+
+<ol>
+<li><strong>Pre-Program Setup</strong>:</li>
+<li>Upload all curriculum materials</li>
+<li>Ingest medical literature into RAG system</li>
+<li>Create discussion forum categories</li>
+<li>Set up user accounts</h1></h2></h3></h4></li>
+</ul>
+
+<ol>
+<li><strong>During Program</strong>:</li>
+<li>Monitor participant progress dashboards</li>
+<li>Review AI chatbot conversations for common questions</li>
+<li>Facilitate weekly discussions</li>
+<li>Track attendance and engagement</h1></h2></h3></h4></li>
+</ul>
+
+<ol>
+<li><strong>Post-Program</strong>:</li>
+<li>Generate outcome reports</li>
+<li>Export data for R analysis</li>
+<li>Survey participants for feedback</li>
+<li>Plan follow-up sessions</h1></h2></h3></h4></li>
+</ul>
+
+<h3>For Patients</h1></h2></h3></h4>
+
+<ol>
+<li><strong>Getting Started</strong>:</li>
+<li>Complete enrollment and baseline assessments</li>
+<li>Set up daily pain logging reminders</li>
+<li>Explore curriculum materials</li>
+<li>Join discussion forums</h1></h2></h3></h4></li>
+</ul>
+
+<ol>
+<li><strong>Weekly Routine</strong>:</li>
+<li>Attend 2-4 sessions per week</li>
+<li>Complete pre/post tests</li>
+<li>Log pain daily</li>
+<li>Ask questions via AI chatbot</li>
+<li>Practice movement exercises</h1></h2></h3></h4></li>
+</ul>
+
+<ol>
+<li><strong>Tracking Progress</strong>:</li>
+<li>Review personal dashboard</li>
+<li>Monitor pain trends</li>
+<li>Track functional improvements</li>
+<li>Celebrate milestones</h1></h2></h3></h4></li>
+</ul>
+
+<h2>🔧 Troubleshooting</h1></h2></h3></h4>
+
+<h3>Common Issues</h1></h2></h3></h4>
+
+<strong>Issue</strong>: Docker containers won't start
+<pre><code><h1>Check logs
+docker-compose logs -f</h1></h2></h3></h4>
+
+<h1>Restart services
+docker-compose down
+docker-compose up -d
+</code></pre></h1></h2></h3></h4>
+
+<strong>Issue</strong>: Database connection errors
+<pre><code><h1>Verify PostgreSQL is running
+docker-compose ps postgres</h1></h2></h3></h4>
+
+<h1>Check connection
+docker-compose exec postgres psql -U postgres -d pain_management -c "SELECT 1;"
+</code></pre></h1></h2></h3></h4>
+
+<strong>Issue</strong>: RAG queries returning no results
+<pre><code><h1>Verify documents are ingested
+docker-compose exec backend python -m backend.scripts.check_vector_db</h1></h2></h3></h4>
+
+<h1>Re-ingest documents
+docker-compose exec backend python -m backend.scripts.ingest_docs
+</code></pre></h1></h2></h3></h4>
+
+<strong>Issue</strong>: Frontend can't reach backend
+<pre><code><h1>Check REACT_APP_API_URL in frontend .env
+<h1>Ensure backend is running on expected port
+curl http://localhost:8000/health
+</code></pre></h1></h2></h3></h4>
+
+<h2>📚 Additional Documentation</h1></h2></h3></h4>
+
+<ul>
+<li><a href="docs/ARCHITECTURE.md">Architecture Details</a></li>
+<li><a href="docs/DATABASE_SCHEMA.md">Database Schema</a></li>
+<li><a href="docs/API_REFERENCE.md">API Reference</a></li>
+<li><a href="docs/CURRICULUM_GUIDE.md">Curriculum Guide</a></li>
+<li><a href="docs/DEPLOYMENT.md">Deployment Guide</a></li>
+<li><a href="docs/SECURITY.md">Security Best Practices</a></h1></h2></h3></h4></li>
+</ul>
+
+<p>---</h1></h2></h3></h4></p>
+
+<strong>Built with ❤️ for pain patients seeking knowledge, community, and better care.</strong>
+
+
+    <hr>
+    <footer style="text-align: center; color: #7f8c8d; margin-top: 60px;">
+        <p><small>Pain Management Support Group Platform v1.0.0</small></p>
+    </footer>
+</body>
+</html>
